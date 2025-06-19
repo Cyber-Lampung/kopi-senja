@@ -1,0 +1,97 @@
+@media screen and (max-width: 468px) {
+  .animation-loading-kopi {
+    position: relative;
+    top: 300px;
+    text-align: center;
+  }
+
+  .animation-loading-kopi .logo-kopi {
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .animation-loading-kopi .logo-kopi .cup {
+    color: #000;
+    font-size: 35px;
+  }
+
+  .animation-loading-kopi .logo-kopi #cup1 {
+    animation: down 2s infinite;
+    transition: all 2s ease;
+  }
+
+  .animation-loading-kopi .logo-kopi #cup2 {
+    animation: up 2s infinite;
+    transition: all 2s ease;
+  }
+
+  .animation-loading-kopi .logo-kopi #cup3 {
+    animation: down 2s infinite;
+    transition: all 2s ease;
+  }
+
+  .animation-loading-kopi .logo-kopi #cup4 {
+    animation: up 2s infinite;
+    transition: all 2s ease;
+  }
+
+  .animation-loading-kopi .logo-kopi #cup5 {
+    animation: down 2s infinite;
+    transition: all 2s ease;
+  }
+
+  @keyframes up {
+    0% {
+      transform: translateY(0px);
+      opacity: 0.1;
+    }
+
+    25% {
+      transform: translateY(-25px);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+
+    75% {
+      transform: translateY(-75%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes down {
+    0% {
+      transform: translateY(0px);
+      opacity: 0.1;
+    }
+
+    25% {
+      transform: translateY(25px);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(50px);
+      opacity: 1;
+    }
+
+    75% {
+      transform: translateY(75%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+}
