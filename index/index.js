@@ -21,10 +21,6 @@ function navbar() {
     }
   });
 }
-<<<<<<< HEAD
-
-navbar();
-=======
 
 navbar();
 
@@ -57,4 +53,3 @@ function search() {
 }
 
 search();
->>>>>>> master

@@ -1,25 +1,18 @@
 const person = document.getElementById("items1");
+const items2 = document.getElementById("items2");
 
 person.addEventListener("click", () => {
-  window.location.href = "../animation-loading-items/loadng.html";
-
-  setTimeout(() => {
-<<<<<<< HEAD
-    window.location.href = "../detail-product/itens/api-product/produc.js";
-  }, 2000);
+  window.location.href =
+    "../animation-loading-items/loadng.html?goto=../detail-product/all-items/detail.html";
 });
-
-console.log(person);
-=======
-    window.location.href = "http://127.0.0.1:5500/index";
-    window.location.href =
-      "http://127.0.0.1:5500/detail-product/all-items/detail.html";
-  }, 5000);
+``;
+items2.addEventListener("click", () => {
+  window.location.href =
+    "../animation-loading-items/loadng.html?goto=../detail-product/all-items/detail.html";
 });
 
 // setTimeout(() => {
 // }, 4100);
->>>>>>> master
 
 function produc(idperson) {
   const product = [
