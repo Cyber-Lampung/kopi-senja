@@ -4,11 +4,22 @@ person.addEventListener("click", () => {
   window.location.href = "../animation-loading-items/loadng.html";
 
   setTimeout(() => {
+<<<<<<< HEAD
     window.location.href = "../detail-product/itens/api-product/produc.js";
   }, 2000);
 });
 
 console.log(person);
+=======
+    window.location.href = "http://127.0.0.1:5500/index";
+    window.location.href =
+      "http://127.0.0.1:5500/detail-product/all-items/detail.html";
+  }, 5000);
+});
+
+// setTimeout(() => {
+// }, 4100);
+>>>>>>> master
 
 function produc(idperson) {
   const product = [

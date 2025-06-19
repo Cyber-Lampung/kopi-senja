@@ -21,5 +21,40 @@ function navbar() {
     }
   });
 }
+<<<<<<< HEAD
 
 navbar();
+=======
+
+navbar();
+
+function search() {
+  // element htmla
+
+  const formsearch = document.getElementById("search-form");
+
+  formsearch.addEventListener("submit", (r) => {
+    r.preventDefault();
+
+    // ambil data value dari judul items
+
+    const card = document.querySelectorAll(".card");
+    const valueJudul = document.querySelectorAll(".card span");
+    const inputSearch = document.getElementById("search").value.toLowerCase();
+
+    if (inputSearch == "") {
+      console.log("not value");
+    }
+
+    valueJudul.forEach((items) => {
+      if (items.innerHTML.toLowerCase().includes(inputSearch.toLowerCase())) {
+        card.style.display = "none";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+}
+
+search();
+>>>>>>> master
