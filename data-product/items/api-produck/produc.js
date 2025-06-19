@@ -1,8 +1,14 @@
 const person = document.getElementById("items1");
 
 person.addEventListener("click", () => {
-  alert(1);
+  window.location.href = "../animation-loading-items/loadng.html";
+
+  setTimeout(() => {
+    window.location.href = "../detail-product/itens/api-product/produc.js";
+  }, 2000);
 });
+
+console.log(person);
 
 function produc(idperson) {
   const product = [
