@@ -1,16 +1,43 @@
-let identity = document.getElementById("span");
-console.log(identity);
-
-const product = [
-  { id: "data-1", jenis: "kopi chapuchino", harga: "4.000", image: "" },
-  { id: "data-2", jenis: "kopi Cincau", harga: "3.000", image: "" },
-  { id: "data-3", jenis: "kopi Dingin", harga: "3.000", image: "" },
-  { id: "data-4", jenis: "kopi gula aren", harga: "3.000", image: "" },
-  { id: "data-5", jenis: "kopi barista", harga: "3.000", image: "" },
-  { id: "data-6", jenis: "kopi asmara", harga: "3.000", image: "" },
+export const product = [
+  {
+    id: "data-1",
+    jenis: "kopi chapuchino",
+    harga: "4.000",
+    image: "/image/image-product/kopi-chapuchino.webp",
+  },
+  {
+    id: "data-2",
+    jenis: "kopi Cincau",
+    harga: "3.000",
+    image: "/image/image-product/images.jpg",
+  },
+  {
+    id: "data-3",
+    jenis: "kopi Dingin",
+    harga: "2.000",
+    image: "/image/image-product/kopi-dingin.jpg",
+  },
+  {
+    id: "data-4",
+    jenis: "kopi gula aren",
+    harga: "6.000",
+    image: "/image/image-product/gula-aren.webp",
+  },
+  {
+    id: "data-5",
+    jenis: "kopi barista",
+    harga: "5.000",
+    image: "/image/image-product/kopi-barista.jpg",
+  },
+  {
+    id: "data-6",
+    jenis: "kopi susu",
+    harga: "7.000",
+    image: "/image/image-product/kopi-susu.jpg",
+  },
 ];
 
-function getDataId(dataProduck) {
+export function getDataId(dataProduck) {
   const id = document.querySelectorAll(".card");
 
   dataProduck.forEach((item) => {
@@ -26,12 +53,42 @@ function getDataId(dataProduck) {
         // mencoba untuk mencari data jika ada maka try = succes
         try {
           if (JsonData.includes(dataId)) {
-            console.log("succes");
-
             function SendData(data) {
               data.forEach((items) => {
                 if (items.id.includes(dataId)) {
-                  console.log(items.harga);
+                  function sendApi() {
+                    // function send to local storage
+                    try {
+                      try {
+                        const button = document.querySelectorAll(
+                          ".button-Detail button"
+                        );
+
+                        button.forEach((buttons) => {
+                          try {
+                            buttons.addEventListener("click", () => {
+                              setTimeout(() => {
+                                window.location.href =
+                                  "../animation-loading-items/loadng.html?next=../detail-product/all-items/detail.html";
+                              }, 100);
+                            });
+                          } catch {
+                            console.log("error button");
+                          }
+
+                          localStorage.setItem("identity", items.jenis);
+                          localStorage.setItem("harga", items.harga);
+                          localStorage.setItem("image", items.image);
+                        });
+                      } catch {
+                        console.log("error redirect");
+                      }
+                    } catch {
+                      console.log("error");
+                    }
+                  }
+
+                  sendApi();
                 }
               });
             }

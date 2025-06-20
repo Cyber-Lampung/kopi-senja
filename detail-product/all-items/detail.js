@@ -91,5 +91,13 @@ const back = document
 
     setTimeout(() => {
       window.location.href = "/index/index.html";
-    }, 2000);
+    }, 1000);
   });
+
+const iden = document.getElementById("identityProduk");
+const harga = document.getElementById("harga");
+const image = document.getElementById("image");
+
+iden.append(localStorage.getItem("identity"));
+harga.append(localStorage.getItem("harga"));
+image.src = "../../" + localStorage.getItem("image");
