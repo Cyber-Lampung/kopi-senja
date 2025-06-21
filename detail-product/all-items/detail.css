@@ -123,7 +123,7 @@
 .product .total-pesanan .text {
   font-family: sans-serif;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 40px;
 }
 
@@ -133,7 +133,7 @@
   justify-content: center;
 }
 
-.product .plus-minus #pesan {
+.product .plus-minus #cart {
   width: 300px;
   height: 40px;
   font-size: 16px;

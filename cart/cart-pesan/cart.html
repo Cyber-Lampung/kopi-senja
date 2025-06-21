@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="cart.css" />
+    <!-- link bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- cart start -->
+    <header>
+      <nav>
+        <i class="back bi-arrow-left"></i>
+        <i id="home" class="home bi-house-door-fill"></i>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <div class="items-cart">
+          <hr />
+          <div class="items">
+            <div class="header-items">
+              <h1>List Items</h1>
+            </div>
+            <div id="itemsData">
+              <div id="data"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="/detail-product/all-items/detail.js"></script>
+    <script type="module" src="cart.js"></script>
+  </body>
+</html>
