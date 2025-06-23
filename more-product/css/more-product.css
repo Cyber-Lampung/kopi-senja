@@ -1,0 +1,123 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  /* header */
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: whitesmoke;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  main {
+    margin-top: 30px;
+  }
+
+  aside .search {
+    text-align: center;
+  }
+
+  #search {
+    margin-top: 20px;
+  }
+
+  #search input {
+    width: 300px;
+    height: 40px;
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+  }
+
+  #container-product {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 768px;
+  }
+
+  #container-product .produck-list {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    width: 90%;
+    margin: auto;
+    overflow-y: scroll;
+  }
+
+  #container-product .produck-list .card {
+    margin: auto;
+    width: 160px;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 10px;
+    gap: 1rem;
+    margin-top: 20px;
+  }
+
+  #container-product .image-kopi {
+    display: flex;
+    justify-content: center;
+  }
+
+  #container-product .image-kopi > img {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 10px;
+  }
+
+  #container-product .produck-list .card #identity {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  #container-product .produck-list .card .decs-kopi {
+    font-size: 13px;
+    width: 90%;
+    height: 31px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #container-product .produck-list .card .button-Detail {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  #container-product .produck-list .card button {
+    width: 130px;
+    height: 30px;
+    background-color: transparent;
+    border: solid 2px transparent;
+    background: linear-gradient(to right, blue, red);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+}
