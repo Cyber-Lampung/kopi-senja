@@ -187,7 +187,7 @@ const cartProduct = () => {
                   </div>
                 </div>
               </div>
-    
+
     `);
 
     // panggil element itemsData

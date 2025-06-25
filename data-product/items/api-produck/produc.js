@@ -41,6 +41,13 @@ export const product = [
     image: "/image/image-product/kopi-susu.jpg",
     decs: "kopi yang bagus dan enak yaitu antara perpaduan antar kopi dengan susu yang sangat enak sekali dan mendapatkan nutrisi dari susu",
   },
+  {
+    id: "data-7",
+    jenis: "susu jahe",
+    harga: "4.000",
+    image: "/image/image-product/kopi-susu.jpg",
+    decs: "susu yang sangat enak sekali dengan  dicampur dengan jahe yang hangat.",
+  },
 ];
 
 export function getDataId(dataProduck) {

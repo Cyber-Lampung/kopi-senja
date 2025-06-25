@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  html {
     overflow: hidden;
   }
 
@@ -33,7 +33,6 @@
   }
 
   main {
-    z-index: 999999999;
     padding-top: 40px;
   }
 
@@ -105,6 +104,7 @@
   .button-buy {
     position: absolute;
     top: 700px;
+    bottom: 0;
   }
 
   .buy {
