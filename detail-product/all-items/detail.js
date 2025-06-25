@@ -119,6 +119,8 @@ function button() {
 
 button();
 
+// cart items
+
 function cart() {
   const cart = document.querySelector(".shoping-cart");
   cart.addEventListener("click", (e) => {
@@ -129,3 +131,69 @@ function cart() {
 }
 
 cart();
+
+// button to append cart product
+
+const cartProduct = () => {
+  const itemsData = document.getElementById("itemsData");
+  const btn = document.getElementById("cart");
+  btn.addEventListener("click", () => {
+    // data elemen html
+    const div = (document.createElement("div").innerHTML = `
+
+    <div id="data">
+                <div class="items">
+                  <div class="jenis-items">
+                    <h4>Kopi gula aren</h4>
+                  </div>
+                  <br />
+                  <div class="harga">
+                    <h5>Rp. 5000</h5>
+                  </div>
+                </div>
+
+                <div class="navigasi-items">
+                  <div
+                    class="plus-minus"
+                    style="display: flex; gap: 1rem; align-items: center"
+                  >
+                    <button
+                      style="
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 6px;
+                        background-color: transparent;
+                        border: solid 2px black;
+                      "
+                    >
+                      +
+                    </button>
+                    <span
+                      style="font-family: sans-serif; font-size: 15px"
+                      id="jumlah"
+                      >2</span
+                    >
+                    <button
+                      style="
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 6px;
+                        background-color: transparent;
+                        border: solid 2px black;
+                      "
+                    >
+                      -
+                    </button>
+                  </div>
+                </div>
+              </div>
+    
+    `);
+
+    // panggil element itemsData
+
+    itemsData.append(div);
+  });
+};
+
+cartProduct();

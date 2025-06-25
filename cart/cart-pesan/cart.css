@@ -9,10 +9,16 @@
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
   /* header */
   header {
     padding: 20px;
     font-size: 20px;
+    z-index: 99999;
+    background-color: white;
   }
 
   header nav {
@@ -26,21 +32,91 @@
     font-size: 25px;
   }
 
+  main {
+    z-index: 999999999;
+    padding-top: 40px;
+  }
+
+  aside {
+    width: 90%;
+    margin: auto;
+  }
+
   /* aside produck */
-  aside .items {
+  /* aside .items {
     max-width: 1200px;
     width: 90%;
     margin: 50px auto;
+  } */
+
+  aside #itemsData {
+    margin-top: 30px;
+    overflow: scroll;
+    height: 500px;
   }
 
   aside #data {
+    z-index: 99999;
     margin: 20px auto;
-    width: 85%;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
     height: 70px;
     border: solid 2px black;
     border-radius: 10px;
     align-items: center;
     display: flex;
     font-weight: bold;
+  }
+
+  .desain {
+    z-index: 10s;
+  }
+
+  .desain-orange::before {
+    content: "";
+    right: 400px;
+    top: -200px;
+    position: absolute;
+    width: 100px;
+    transform: rotate(-30deg);
+    height: 100px;
+    background: linear-gradient(to left, red, 50%, orange);
+    opacity: 0.3;
+    border-radius: 30px;
+  }
+
+  .desain-orange {
+    position: absolute;
+    width: 100px;
+    right: -90px;
+    transform: rotate(-30deg);
+    height: 100px;
+    background: linear-gradient(to left, red, 50%, orange);
+    opacity: 0.3;
+    border-radius: 30px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-buy {
+    position: absolute;
+    top: 700px;
+  }
+
+  .buy {
+    width: 300px;
+    height: 40px;
+    border-radius: 17px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    background: linear-gradient(to left, red, blue);
+    border: none;
   }
 }
