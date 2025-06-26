@@ -50,3 +50,16 @@ back.addEventListener("click", () => {
     window.location.href = "../../../index/index.html";
   }, 1000);
 });
+
+// cart items
+
+function cart() {
+  const cart = document.querySelector(".shoping-cart");
+  cart.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    window.location.href = "../../cart/cart-pesan/cart.html";
+  });
+}
+
+cart();

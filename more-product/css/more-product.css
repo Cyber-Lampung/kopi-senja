@@ -12,6 +12,10 @@ body {
 @media screen and (max-width: 768px) {
   /* header */
 
+  body {
+    margin-bottom: 50px;
+  }
+
   header {
     position: sticky;
     top: 0;
@@ -28,6 +32,7 @@ body {
 
   main {
     margin-top: 30px;
+    margin-bottom: 10px;
   }
 
   aside .search {
@@ -45,6 +50,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-family: sans-serif;
+    outline: none;
   }
 
   #container-product {
