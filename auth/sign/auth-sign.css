@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-sign > img {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  object-fit: cover;
+  inset: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+#auth-sign {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}

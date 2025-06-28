@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Page</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="auth-sign.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="form-sign">
+        <img src="/image/auth-image/Desain tanpa judul.png" alt="" />
+        <form
+          id="auth-sign"
+          style="text-align: center; width: 90%; margin: auto"
+        >
+          <div
+            class="icon-coffe"
+            style="
+              top: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            <img
+              src="/image/auth-image/image-person.png"
+              alt=""
+              style="
+                border-radius: 50px;
+                width: 200px;
+                z-index: 1;
+                position: relative;
+                top: 20px;
+                border-radius: 400px;
+              "
+            />
+          </div>
+
+          <div
+            class="container-form"
+            style="
+              position: relative;
+              margin: 30px auto;
+              top: -70px;
+              width: 98%;
+              background-color: rgb(229, 212, 168);
+              height: 370px;
+              border-radius: 30px;
+              z-index: 9999;
+            "
+          >
+            <div
+              class="title-form"
+              style="
+                font-size: 26px;
+                font-weight: 900;
+                font-family: 'Courier New', Courier, sans-serif;
+                padding-top: 25px;
+              "
+            >
+              <p>Sign Up</p>
+            </div>
+            <div class="inputan" style="margin-top: 30px">
+              <div class="email">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  style="
+                    width: 85%;
+                    margin: auto;
+                    font-family: sans-serif;
+                    margin-bottom: 10px;
+                    height: 35px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    color: brown;
+                    outline: none;
+                    background-color: rgb(232, 220, 204);
+                  "
+                  id="email"
+                  required
+                />
+              </div>
+
+              <div class="username">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  style="
+                    width: 85%;
+                    margin: auto;
+                    font-family: sans-serif;
+                    margin-bottom: 10px;
+                    height: 35px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    color: brown;
+                    outline: none;
+                    background-color: rgb(232, 220, 204);
+                  "
+                  id="user"
+                />
+              </div>
+              <div class="password">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  style="
+                    width: 85%;
+                    margin: auto;
+                    font-family: sans-serif;
+                    height: 35px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    color: brown;
+                    outline: none;
+                    background-color: rgb(232, 220, 204);
+                  "
+                  id="pass"
+                />
+              </div>
+              <div class="button" style="margin-top: 30px">
+                <button
+                  style="
+                    width: 150px;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: rgba(158, 93, 36, 0.97);
+                    font-family: sans-serif;
+                    font-weight: 550;
+                    font-size: 20px;
+                    color: white;
+                  "
+                >
+                  Sign up
+                </button>
+              </div>
+              <div class="forgot-pass" style="margin-top: 30px">
+                <a
+                  href="#"
+                  style="
+                    font-family: sans-serif;
+                    font-weight: 500;
+                    color: black;
+                    text-decoration: none;
+                  "
+                  >Have an account ? Log in
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="notive"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/js/auth/auth.js"></script>
+</html>
