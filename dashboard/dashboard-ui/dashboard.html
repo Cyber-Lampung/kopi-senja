@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- link bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>Kopi Senja</h1>
+        <nav id="navbar-list">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Riwayat Pemesanan</a></li>
+            <li><a href="#">Acount</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu">
+          <label for="menu">
+            <i class="menu-list bi-list"></i>
+          </label>
+          <input type="checkbox" id="menu" hidden />
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <!-- acount dan bagian payment -->
+
+      <div class="acount">
+        <div id="username"></div>
+      </div>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"
+  ></script>
+</html>

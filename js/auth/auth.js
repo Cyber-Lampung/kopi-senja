@@ -1,4 +1,6 @@
-function auth() {
+import { user } from "../../js/auth/user/user.js";
+
+function auth(dataUser) {
   // ambil form auth
 
   const button = document.getElementById("button");
@@ -111,7 +113,7 @@ function auth() {
       }
       // callback user
 
-      function datauser(email, user, password, callback) {
+      function datauser(email, user, password, data, callback) {
         // save user di localStorage
 
         const getData = [
@@ -122,12 +124,16 @@ function auth() {
           localStorage.setItem("LoginUser", DataJson);
         });
 
+        setTimeout(() => {
+          localStorage.removeItem("LoginUser");
+        }, 15000);
+
         // testing
 
         callback();
       }
 
-      datauser(email, user, pass);
+      datauser(email, user, pass, dataUser);
 
       // catch
     } catch {
@@ -138,4 +144,4 @@ function auth() {
   });
 }
 
-auth();
+auth(user);
