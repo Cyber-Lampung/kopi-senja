@@ -1,9 +1,9 @@
 function auth() {
   // ambil form auth
 
-  const form = document.getElementById("auth-sign");
+  const button = document.getElementById("button");
 
-  form.addEventListener("click", (r) => {
+  button.addEventListener("click", (r) => {
     //  no auto refresh
     r.preventDefault();
 
@@ -99,9 +99,37 @@ function auth() {
         });
       }
 
-      console.log(userarray);
+      if (pass.length < 8) {
+        setTimeout(() => {
+          notive.style.display = "none";
+        }, 1000);
 
-      //
+        setTimeout(() => {
+          notive.innerHTML = gagal;
+          notive.style.display = "block";
+        }, 0);
+      }
+      // callback user
+
+      function datauser(email, user, password, callback) {
+        // save user di localStorage
+
+        const getData = [
+          { email: email, user: btoa(user), password: btoa(password) },
+        ];
+        getData.forEach((items) => {
+          const DataJson = JSON.stringify(items);
+          localStorage.setItem("LoginUser", DataJson);
+        });
+
+        // testing
+
+        callback();
+      }
+
+      datauser(email, user, pass);
+
+      // catch
     } catch {
       console.log("aman");
     }
