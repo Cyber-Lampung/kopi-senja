@@ -1,103 +1,33 @@
-import { user } from "../../js/auth/user/user.js";
+import { dataUsr } from "../../js/auth/user/user.js";
 
-function getUser(objuser) {
-  const form = document.getElementById("auth-login");
+const userData = dataUsr;
 
-  form.addEventListener("submit", (e) => {
-    // no auto refresh
-    e.preventDefault();
+const form = document.getElementById("form");
 
-    // array user
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const arrayUser = [];
+  // user inputan
 
-    const data = localStorage.getItem("LoginUser");
+  const user = document.getElementById("user").value;
+  const pass = document.getElementById("pass").value;
 
-    // ubah data -> object
+  //console.log(email, user, pass);
 
-    const objUser = JSON.parse(data);
+  if (pass.length <= 8) {
+    console.log("no strong password");
+  }
 
-    // push user data => array
+  // push user in data user
 
-    arrayUser.push(objUser);
+  const founduser = userData.map((item) => console.log(item));
 
-    // testing
-    // console.log(arrayUser);
+  if (founduser) {
+    // window.location.href = "../../dashboard/dashboard-ui/dashboard.html";
+    console.log(userData);
+  } else {
+    console.log("user not found");
+  }
 
-    // ambil data element html data inputan user
-
-    const auth = document.getElementById("user").value;
-    const pass = document.getElementById("pass").value;
-
-    // element html
-
-    const notive = document.getElementById("notive");
-
-    const gagal = `<div
-            class="notive"
-            style="
-              position: relative;
-              top: -30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 300px;
-              margin: auto;
-              font-family: 'Courier New', Courier, monospace;
-              border-radius: 20px;
-              height: 40px;
-              background-color: white;
-            "
-          >
-            <h3>Gagal send</h3>
-          </div>`;
-
-    const succes = `<div
-            class="notive"
-            style="
-              position: relative;
-              top: -30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 300px;
-              margin: auto;
-              font-family: 'Courier New', Courier, monospace;
-              border-radius: 20px;
-              height: 40px;
-              background-color: white;
-            "
-          >
-            <h3>Succes Send</h3>
-          </div>`;
-
-    // validasi inputan user
-
-    try {
-      // check user found and not found
-
-      try {
-        const user = JSON.parse(localStorage.getItem("LoginUser"));
-
-        const foundUser =
-          user.user === btoa(auth) && user.password === btoa(pass);
-
-        if (foundUser) {
-          window.location.href = "../../dashboard/dashboard-ui/dashboard.html";
-        } else {
-          console.log("user not found");
-        }
-      } catch {
-        console.log(err);
-      }
-
-      // batas catch
-    } catch {
-      console.log("gagal");
-    }
-
-    // user auth
-  });
-}
-
-getUser(user);
+  // end user inputan
+});
