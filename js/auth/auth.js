@@ -1,4 +1,4 @@
-const dataUserLogin = [];
+export const dataUserLogin = [];
 
 const form = document.getElementById("form");
 
@@ -15,6 +15,9 @@ form.addEventListener("submit", (e) => {
 
   if (pass.length <= 8) {
     console.log("no strong password");
+    document.getElementById("pass").style.border = "solid 2px red";
+  } else if (pass.length >= 8) {
+    document.getElementById("pass").style.border = "none";
   }
 
   // push user in data user
@@ -27,6 +30,10 @@ form.addEventListener("submit", (e) => {
   const userJson = JSON.stringify(objUser);
   dataUserLogin.push(objUser);
   localStorage.setItem("localuser", userJson);
+
+  setTimeout(() => {
+    localStorage.removeItem("localuser");
+  }, 20000);
 
   // end user inputan
 });

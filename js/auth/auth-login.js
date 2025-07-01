@@ -1,3 +1,4 @@
+const localArray = [];
 // form start
 const form = document.getElementById("form");
 
@@ -9,6 +10,8 @@ form.addEventListener("submit", (e) => {
   const local = localStorage.getItem("localuser");
 
   let localtoObjek = JSON.parse(local);
+
+  localArray.push(localtoObjek);
 
   // user inputan
 
@@ -35,5 +38,6 @@ form.addEventListener("submit", (e) => {
     console.log("user not found ");
   }
 
+  console.log(localArray);
   // end user inputan
 });

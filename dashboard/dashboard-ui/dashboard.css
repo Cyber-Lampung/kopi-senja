@@ -65,7 +65,21 @@
     border-bottom: solid 2px white;
   }
 
-  .username {
-    font-size: 20px;
+  .infomation-user {
+    font-family: sans-serif;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+  .infomation-user .foto-profile {
+    display: flex;
+  }
+
+  .infomation-user .foto-profile > img {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 200px;
   }
 }
