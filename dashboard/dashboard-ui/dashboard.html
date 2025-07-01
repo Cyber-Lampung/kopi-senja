@@ -39,11 +39,20 @@
       <div class="acount">
         <div class="infomation-user">
           <div class="foto-profile">
-            <img src="" alt="" />
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz-bL0iV_VNRUYuA6g0MG6CFc34J8905nAKyPGHGxQsWtTmUWMHw4wJBd1S4r2FTLagWRjSvSOPa5CH4OAiSSQMiBpM-iC-sZM3PtuE_iImyftufj4zNjEJSZAvOoQ5KqrpaOfNFk704x2wvzsoyFPHWDR03ScoNcLbOlUnSKHoO4HvvHRcRNN7rbgrQ/w0/kucing%20imut.png"
+              alt=""
+            />
             <!-- information user profile -->
-            <div class="username">
-              <span id="username">Rado Hidayatulloh</span>
-              <span>user : <span id=""></span></span>
+            <div
+              class="username"
+              style="display: flex; flex-direction: column; gap: 0.5rem"
+            >
+              <span id="username" style="font-weight: bold; font-size: 17px; letter-spacing: 0.1rem;"
+                >User Testing</span
+              >
+
+              <span style="font-size: 10px;">User id : <span id="id" style="letter-spacing: 1px; font-size: 10px;">766768676</span></span>
             </div>
           </div>
         </div>
@@ -53,16 +62,62 @@
     <!-- main article -->
 
     <main>
-      <article id="container-informasi">
+      <article id="container-informasi" style="width: 90%; margin: 40px 10px auto;">
         <!-- main container informasi user -->
 
+        <div class="title">
+          <h2>Information User</h2>
+        </div>
+
         <!-- balance -->
-        <div class="balance">
-          <div class="card">
-            <div class="value"></div>
+        <div class="container-info">
+          <div class="balance">
+            <div class="container-card">
+               <div class="card">
+              <div class="value">
+                <p class="p">incoming balance</p>
+                <div class="visibility">
+                  <p>Rp. <span id="dana">200.0000</span></p>
+                  <i class="visi bi-eye"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="value">
+                <p class="p">outgoing balance</p>
+                <div class="visibility">
+                  <p>Rp. <span id="dana">200.0000</span></p>
+                  <i class="visi bi-eye"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="value">
+                <p class="p">Jumlah Saldo</p>
+                <div class="visibility">
+                  <p>Rp. <span id="dana">200.0000</span></p>
+                  <i class="visi bi-eye"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
+
+      <!-- aside navbar -->
+
+      <aside style="margin-top: 30px;">
+        <div class="aside">
+          <nav class="nav-aside">
+          <a href=""><img src="https://img.icons8.com/?size=30&id=OCxQsO5NwE9M&format=png&color=000000" alt=""></a>
+          <a href=""><img src="https://img.icons8.com/?size=30&id=12861&format=png&color=000000" alt=""></a>
+          <a href=""><img src="https://img.icons8.com/?size=30&id=17579&format=png&color=000000" alt=""></a>
+          <a href=""><img src="https://img.icons8.com/?size=30&id=63653&format=png&color=000000" alt=""></a>
+        </nav>
+        </div>
+      </aside>
+
+      <!-- end aside navbar -->
     </main>
 
     <!-- end main article  -->
