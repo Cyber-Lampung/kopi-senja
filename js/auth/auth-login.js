@@ -1,11 +1,14 @@
-import { dataUsr } from "../../js/auth/user/user.js";
-
-const userData = dataUsr;
-
+// form start
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // save user to aray
+
+  const local = localStorage.getItem("localuser");
+
+  let localtoObjek = JSON.parse(local);
 
   // user inputan
 
@@ -20,13 +23,16 @@ form.addEventListener("submit", (e) => {
 
   // push user in data user
 
-  const founduser = userData.map((item) => console.log(item));
+  // login users
 
-  if (founduser) {
-    // window.location.href = "../../dashboard/dashboard-ui/dashboard.html";
-    console.log(userData);
+  let foundUser = localtoObjek.user === user && localtoObjek.password === pass;
+
+  if (foundUser) {
+    // redirect to dashboard jika ketemu to acount
+
+    window.location.href = "../../dashboard/dashboard-ui/dashboard.html";
   } else {
-    console.log("user not found");
+    console.log("user not found ");
   }
 
   // end user inputan

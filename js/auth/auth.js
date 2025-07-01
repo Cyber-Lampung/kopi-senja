@@ -1,6 +1,4 @@
-import { dataUsr } from "../../js/auth/user/user.js";
-
-const userData = dataUsr;
+const dataUserLogin = [];
 
 const form = document.getElementById("form");
 
@@ -26,10 +24,9 @@ form.addEventListener("submit", (e) => {
     user: user,
     password: pass,
   };
-
-  userData.push(objUser);
-
-  console.log(userData);
+  const userJson = JSON.stringify(objUser);
+  dataUserLogin.push(objUser);
+  localStorage.setItem("localuser", userJson);
 
   // end user inputan
 });
