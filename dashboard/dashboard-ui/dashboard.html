@@ -62,7 +62,7 @@
     <!-- main article -->
 
     <main>
-      <article id="container-informasi" style="width: 90%; margin: 40px 10px auto;">
+      <article id="container-informasi">
         <!-- main container informasi user -->
 
         <div class="title">
@@ -73,12 +73,15 @@
         <div class="container-info">
           <div class="balance">
             <div class="container-card">
-               <div class="card">
+              <div class="card">
               <div class="value">
                 <p class="p">incoming balance</p>
                 <div class="visibility">
-                  <p>Rp. <span id="dana">200.0000</span></p>
-                  <i class="visi bi-eye"></i>
+                  <p>Rp. <span id="danaIncoming">200.0000</span></p>
+                  <label for="incoming">
+                    <i class=" bi-eye" id="incomingBalance"></i>
+                  </label>
+                  <input type="checkbox" id="incoming" hidden>
                 </div>
               </div>
             </div>
@@ -86,8 +89,11 @@
               <div class="value">
                 <p class="p">outgoing balance</p>
                 <div class="visibility">
-                  <p>Rp. <span id="dana">200.0000</span></p>
-                  <i class="visi bi-eye"></i>
+                  <p>Rp. <span id="danaout">200.0000</span></p>
+                  <label for="checkO">
+                    <i class=" bi-eye" ></i>
+                  </label>
+                  <input type="checkbox" id="checkO" hidden>
                 </div>
               </div>
             </div>
@@ -95,8 +101,11 @@
               <div class="value">
                 <p class="p">Jumlah Saldo</p>
                 <div class="visibility">
-                  <p>Rp. <span id="dana">200.0000</span></p>
-                  <i class="visi bi-eye"></i>
+                  <p>Rp. <span id="danaJ">200.0000</span></p>
+                  <label for="checkJ">
+                    <i class=" bi-eye" ></i>
+                  </label>
+                  <input type="checkbox" id="checkJ" hidden>
                 </div>
               </div>
             </div>
@@ -118,6 +127,27 @@
       </aside>
 
       <!-- end aside navbar -->
+
+      <!-- article event -->
+
+      <article id="event">
+        <div class="container-event" >
+
+            <div class="cardEvent">
+              <p>isi content</p>
+            </div>
+            <div class="cardEvent">
+              <p>isi content</p>
+            </div>
+            <div class="cardEvent">
+              <p>isi content</p>
+            </div>
+          
+        </div>
+      </article>
+
+      <!-- end article event -->
+
     </main>
 
     <!-- end main article  -->

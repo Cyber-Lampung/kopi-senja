@@ -15,3 +15,44 @@ function navbar() {
 }
 
 navbar();
+
+// visibility balance config
+
+function visibility() {
+  // visibility balance incoming balance
+
+  const danaIncoming = document.getElementById("danaIncoming");
+  const checkI = document.getElementById("incoming");
+
+  checkI.addEventListener("click", () => {
+    if (checkI.checked) {
+      danaIncoming.textContent = "***********";
+    } else {
+      danaIncoming.textContent = "200.000";
+    }
+  });
+
+  const danaout = document.getElementById("danaout");
+  const checkO = document.getElementById("checkO");
+
+  checkO.addEventListener("click", () => {
+    if (checkO.checked) {
+      danaout.textContent = "***********";
+    } else {
+      danaout.textContent = "200.000";
+    }
+  });
+
+  const danaJ = document.getElementById("danaJ");
+  const checkj = document.getElementById("checkJ");
+
+  checkj.addEventListener("click", () => {
+    if (checkj.checked) {
+      danaJ.textContent = "***********";
+    } else {
+      danaJ.textContent = "200.000";
+    }
+  });
+}
+
+visibility();
