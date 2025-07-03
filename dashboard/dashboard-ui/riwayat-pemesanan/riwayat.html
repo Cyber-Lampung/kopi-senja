@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- link for css -->
+    <link
+      rel="stylesheet"
+      href="/dashboard/dashboard-ui/riwayat-pemesanan/riwayat.css"
+    />
+    <!-- link bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>Kopi Senja</h1>
+        <nav id="navbar-list">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li>
+              <a href="/dashboard/dashboard-ui/riwayat-pemesanan/riwayat.html"
+                >Riwayat Pemesanan</a
+              >
+            </li>
+            <li><a href="#">Acount</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu">
+          <label for="menu">
+            <i class="menu-list bi-list"></i>
+          </label>
+          <input type="checkbox" id="menu" hidden />
+        </div>
+      </div>
+    </header>
+
+    <!-- section bar -->
+
+    <section id="section-menu" style="width: 90%; margin: 30px auto">
+      <!-- border riwayat -->
+      <div class="container-riwayat">
+        <div class="title">
+          <h2>Riwayat Pemesanan</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- end section bar -->
+
+    <!-- main riwayat -->
+
+    <main id="main-riwayat"></main>
+
+    <!-- end main riwayat -->
+  </body>
+  <!-- script js -->
+  <script src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"></script>
+</html>
