@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account User</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="account.css" />
+    <!-- link bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+
+    <header>
+      <div class="navbar">
+        <h1>Kopi Senja</h1>
+        <nav id="navbar-list">
+          <ul>
+            <li><a href="../dashboard.html">Dashboard</a></li>
+            <li>
+              <a href="/dashboard/dashboard-ui/riwayat-pemesanan/riwayat.html"
+                >Riwayat Pemesanan</a
+              >
+            </li>
+            <li><a href="">Acount</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu">
+          <label for="menu">
+            <i class="menu-list bi-list"></i>
+          </label>
+          <input type="checkbox" id="menu" hidden />
+        </div>
+      </div>
+    </header>
+
+    <!-- end header -->
+
+    <!-- aside navbar icon -->
+
+    <aside id="navbar-aside" style="margin-top: 30px">
+      <div class="navbar-icon">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="person bi-person"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="setting bi-gear"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="log bi-shield-lock"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- end aside navbar icon -->
+
+    <!-- container user acount -->
+
+    <section id="person">
+      <div class="user-account">
+        <div class="image-user">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz-bL0iV_VNRUYuA6g0MG6CFc34J8905nAKyPGHGxQsWtTmUWMHw4wJBd1S4r2FTLagWRjSvSOPa5CH4OAiSSQMiBpM-iC-sZM3PtuE_iImyftufj4zNjEJSZAvOoQ5KqrpaOfNFk704x2wvzsoyFPHWDR03ScoNcLbOlUnSKHoO4HvvHRcRNN7rbgrQ/w0/kucing%20imut.png"
+            alt="image-profile"
+          />
+        </div>
+        <div class="information-user">
+          <div class="box-user">
+            <div class="username" style="display: flex">
+              <p>Username :</p>
+              <span id="username" style="padding-left: 15px">User Testing</span>
+            </div>
+            <div class="email" style="display: flex">
+              <p>Email :</p>
+              <span id="email" style="padding-left: 50px"
+                >usertesting@gmail.com</span
+              >
+            </div>
+            <div class="nomor-hp" style="display: flex">
+              <p>Nomor Hp :</p>
+              <span id="number-hp" style="padding-left: 17px"
+                >0891222222233</span
+              >
+            </div>
+            <div class="status" style="display: flex">
+              <p>Status user :</p>
+              <span id="status" style="padding-left: 10px">aktif user</span>
+            </div>
+            <div class="password" style="display: flex">
+              <p>Password :</p>
+              <span id="status" style="padding-left: 20px">**********</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for setting -->
+
+    <section id="setting"></section>
+
+    <!-- end section for setting -->
+
+    <!-- end container user acount -->
+  </body>
+  <!-- script javascript -->
+  <script src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"></script>
+</html>

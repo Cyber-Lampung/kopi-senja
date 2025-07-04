@@ -20,7 +20,7 @@
           <ul>
             <li><a href="#">Dashboard</a></li>
             <li><a href="/dashboard/dashboard-ui/riwayat-pemesanan/riwayat.html">Riwayat Pemesanan</a></li>
-            <li><a href="#">Acount</a></li>
+            <li><a href="/dashboard/dashboard-ui/account-user/account.html">Account</a></li>
           </ul>
         </nav>
 
@@ -53,6 +53,7 @@
               >
 
               <span style="font-size: 10px;">User id : <span id="id" style="letter-spacing: 1px; font-size: 10px;">766768676</span></span>
+              <p style="font-size: 10px;">Status : <span id="status">Online</span></p>
             </div>
           </div>
         </div>
@@ -62,6 +63,7 @@
     <!-- main article -->
 
     <main>
+      
       <article id="container-informasi">
         <!-- main container informasi user -->
 
@@ -149,9 +151,40 @@
       <!-- end article event -->
 
     </main>
-
     <!-- end main article  -->
 
+    
+    <!-- footer bar -->
+
+    <footer style="position: sticky; bottom: 0;">
+
+      <aside style="overflow: hidden;">
+        <nav style="background-color: rgb(12, 12, 150); height: 50px;">
+
+          <div class="items">
+            <div class="icon" style="display: flex; justify-content: center;">
+              <div class="icon-left" style=" padding-top: 15px; display: flex; position: relative; font-size: 20px; gap: 3rem; color: white; font-weight: bold; right: 45px;">
+                <i class="home bi-house"></i>
+                <i class="home bi-cart"></i>
+              </div>
+              <div class="icon-center" style="display: flex; align-items: center; font-size: 25px; gap: 2rem; font-weight: bold; position: relative; top: -35px;">
+                <div class="border-icon" style="display: flex; justify-content: center; background-color: white; height: 140px; width: 70px; align-items: center; border-radius: 10px;">
+                  <i style="font-size: 36px; color: black; position: relative; top: -10px;" class="qr bi-qr-code-scan"></i>
+                </div>
+              </div>
+              <div class="icon-right" style="padding-top: 15px; display: flex; position: relative; left: 45px; font-size: 20px; gap: 3rem; color: white; font-weight: bold;">
+                <i class="acount bi-person"></i>
+                <i class="logout bi-door-closed-fill"></i>
+              </div>
+            </div>
+          </div>
+
+        </nav>
+      </aside>
+
+    </footer>
+
+    <!-- end footer bar -->
   </body>
   <script
     type="module"
