@@ -48,19 +48,13 @@
         <nav>
           <ul>
             <li>
-              <a href="#">
-                <i class="person bi-person"></i>
-              </a>
+              <i class="person bi-person"></i>
             </li>
             <li>
-              <a href="#">
-                <i class="setting bi-gear"></i>
-              </a>
+              <i class="setting bi-gear"></i>
             </li>
             <li>
-              <a href="#">
-                <i class="log bi-shield-lock"></i>
-              </a>
+              <i class="log bi-shield-lock"></i>
             </li>
           </ul>
         </nav>
@@ -114,7 +108,7 @@
 
     <!-- section for setting -->
 
-    <section id="setting">
+    <section id="setting" style="display: none">
       <div
         class="container-setting"
         style="padding-top: 40px; padding-left: 30px; color: white"
@@ -127,9 +121,89 @@
             <label for="file">
               <p>Upload Foto</p>
             </label>
-            <input type="file" id="file" />
+            <input type="file" id="file" accept="img/image" />
+          </div>
+          <button id="buttonUpload">Upload</button>
+        </div>
+        <div class="ganti-username" style="margin-top: 30px">
+          <div class="title">
+            <label for="username">
+              <p>Email</p>
+            </label>
+            <input
+              type="email"
+              placeholder="Email"
+              id="username"
+              style="
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 250px;
+                height: 30px;
+                padding: 4px;
+                border-radius: 10px;
+                outline: none;
+                border: transparent;
+              "
+            />
           </div>
         </div>
+        <div class="username">
+          <div class="title">
+            <label for="Username">
+              <p>Username</p>
+            </label>
+            <input
+              type="text"
+              placeholder="Username"
+              id="Username"
+              style="
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 250px;
+                height: 30px;
+                padding: 4px;
+                border-radius: 10px;
+                outline: none;
+                border: transparent;
+              "
+            />
+          </div>
+        </div>
+        <div class="password">
+          <label for="password">
+            <p>Password</p>
+          </label>
+          <input
+            type="password"
+            placeholder="Password"
+            style="
+              margin-top: 10px;
+              margin-bottom: 10px;
+              width: 250px;
+              height: 30px;
+              padding: 4px;
+              border-radius: 10px;
+              outline: none;
+              border: transparent;
+            "
+          />
+        </div>
+        <button
+          id="buttonUpload"
+          style="
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            color: white;
+            border-radius: 10px;
+            background: linear-gradient(to left, red, blue);
+            margin-top: 30px;
+            font-weight: bold;
+            border: none;
+          "
+        >
+          Update Data
+        </button>
       </div>
     </section>
 
@@ -137,4 +211,5 @@
   </body>
   <!-- script javascript -->
   <script src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"></script>
+  <script src="/dashboard/dashboard-backend/account-backend/file.js"></script>
 </html>
