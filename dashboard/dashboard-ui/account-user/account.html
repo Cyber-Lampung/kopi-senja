@@ -26,7 +26,11 @@
                 >Riwayat Pemesanan</a
               >
             </li>
-            <li><a href="">Acount</a></li>
+            <li>
+              <a href="/dashboard/dashboard-ui/account-user/account.html"
+                >Account</a
+              >
+            </li>
           </ul>
         </nav>
 
@@ -65,7 +69,7 @@
 
     <!-- container user acount -->
 
-    <section id="person">
+    <section id="person" style="display: none">
       <div class="user-account">
         <div class="image-user">
           <img
@@ -208,6 +212,86 @@
     </section>
 
     <!-- end section for setting -->
+
+    <!-- section for keamanan -->
+
+    <section id="keamanandanTentang">
+      <!-- start for keamanan -->
+
+      <div
+        class="box-keamanan"
+        style="width: 80%; margin: auto; padding-top: 40px"
+      >
+        <div class="title" style="font-family: sans-serif; color: white">
+          <h2>Keamanan Dan Tentang</h2>
+        </div>
+
+        <div class="list-keamanan">
+          <div class="2fa" style="margin-top: 30px; color: white">
+            <!-- keamanan 2fa -->
+            <div class="box-2fa">
+              <div class="title-2fa">
+                <p style="font-weight: bold">2FA authentication</p>
+              </div>
+              <div
+                class="value-2fa"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 10px;
+                  font-size: 13px;
+                "
+              >
+                <p>status 2fa :</p>
+                <div class="status">
+                  <select name="option" id="option">
+                    <option value=""></option>
+                    <option value="active">active</option>
+                    <option value="non-active">disable</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- tantang -->
+            <div class="tentang" style="margin-top: 20px">
+              <div class="box-tentang">
+                <div class="title">
+                  <p style="font-weight: bold">Tentang Kami</p>
+                </div>
+                <div
+                  class="value-about"
+                  style="
+                    padding-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                  "
+                >
+                  <p style="font-size: 13px">Lihat Profile Me :</p>
+                  <button
+                    style="
+                      width: 100px;
+                      height: 30px;
+                      border: none;
+                      background-color: transparent;
+                      color: white;
+                      font-weight: bold;
+                      background: linear-gradient(to left, blue, red);
+                      border-radius: 10px;
+                      font-size: 12px;
+                    "
+                  >
+                    Open Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end section for keamanan -->
   </body>
   <!-- script javascript -->
   <script src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"></script>
