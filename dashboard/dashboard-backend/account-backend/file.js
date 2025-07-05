@@ -15,3 +15,25 @@ function UploadFile() {
 }
 
 UploadFile();
+
+function profileMe() {
+  const btnOpen = document.getElementById("openProfile");
+  const profile = document.getElementById("profileMe");
+
+  btnOpen.addEventListener("click", () => {
+    if (btnOpen.click) {
+      profile.style.display = "block";
+      profile.style.transition = "all 2s ease";
+    }
+  });
+
+  const x = document.getElementById("x");
+
+  x.addEventListener("click", () => {
+    if (x.click) {
+      profile.style.display = "none";
+    }
+  });
+}
+
+profileMe();

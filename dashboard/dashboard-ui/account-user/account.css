@@ -154,4 +154,67 @@
     border: none;
     background: linear-gradient(to left, blue, red);
   }
+
+  #profileMe {
+    display: none;
+    position: absolute;
+    top: 200px;
+    margin: auto;
+    left: 10px;
+    transition: all 4s ease;
+  }
+
+  #profileMe .x {
+    color: white;
+    position: absolute;
+    z-index: 99999;
+    top: 20px;
+    left: 320px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #profileMe > img {
+    width: 370px;
+    height: 550px;
+    border-radius: 30px;
+  }
+
+  #profileMe .container-profile .image-profile {
+    position: absolute;
+    top: 80px;
+    left: 140px;
+    z-index: 999999;
+  }
+
+  #profileMe .container-profile .image-profile > img {
+    border-radius: 50px;
+    border: solid 3px white;
+  }
+
+  #profileMe .container-profile .profile-user {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    top: 140px;
+    left: 35px;
+    border-radius: 40px;
+  }
+
+  #profileMe .container-profile .media-social {
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+  }
+
+  #profileMe .container-profile .media-social .container-medsos {
+    display: flex;
+  }
+
+  #profileMe .container-profile .media-social .container-medsos .icon {
+    display: flex;
+    gap: 2rem;
+    font-size: 25px;
+  }
 }

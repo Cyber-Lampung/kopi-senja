@@ -56,19 +56,3 @@ function visibility() {
 }
 
 visibility();
-
-function gantiTampilan() {
-  // ganti tampilan
-
-  const person = document.getElementById("person");
-  const setting = document.getElementById("setting");
-  const Keamanan = document.getElementById("person");
-
-  try {
-    console.log(person, setting);
-  } catch (err) {
-    console.log("message : ", err);
-  }
-}
-
-gantiTampilan();

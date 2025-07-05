@@ -24,15 +24,14 @@
   }
 
   #profile .container-profile {
-    z-index: 99999;
-    display: flex;
     position: relative;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
   }
 
   #profile .container-profile .image-profile {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
     margin-top: 30px;
   }
 
@@ -54,5 +53,28 @@
 
   #profile .container-profile .profile-user:hover {
     transform: scale(1.1);
+  }
+
+  .media-social {
+    margin-top: 50px;
+  }
+
+  .media-social .container-medsos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-social .container-medsos .icon {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .media-social .container-medsos .icon i {
+    font-size: 20px;
+    transition: all 2s ease;
+  }
+
+  .media-social .container-medsos .icon i:hover {
+    transform: scale(1.5);
   }
 }

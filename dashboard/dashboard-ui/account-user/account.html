@@ -69,7 +69,7 @@
 
     <!-- container user acount -->
 
-    <section id="person" style="display: none">
+    <section id="person">
       <div class="user-account">
         <div class="image-user">
           <img
@@ -80,27 +80,32 @@
         <div class="information-user">
           <div class="box-user">
             <div class="username" style="display: flex">
-              <p>Username :</p>
+              <p>Username</p>
+              <span>:</span>
               <span id="username" style="padding-left: 15px">User Testing</span>
             </div>
             <div class="email" style="display: flex">
-              <p>Email :</p>
+              <p>Email</p>
+              <span>:</span>
               <span id="email" style="padding-left: 50px"
                 >usertesting@gmail.com</span
               >
             </div>
             <div class="nomor-hp" style="display: flex">
-              <p>Nomor Hp :</p>
+              <p>Nomor Hp</p>
+              <span>:</span>
               <span id="number-hp" style="padding-left: 17px"
                 >0891222222233</span
               >
             </div>
             <div class="status" style="display: flex">
-              <p>Status user :</p>
+              <p>Status user</p>
+              <span>:</span>
               <span id="status" style="padding-left: 10px">aktif user</span>
             </div>
             <div class="password" style="display: flex">
-              <p>Password :</p>
+              <p>Password</p>
+              <span>:</span>
               <span id="status" style="padding-left: 20px">**********</span>
             </div>
           </div>
@@ -215,7 +220,7 @@
 
     <!-- section for keamanan -->
 
-    <section id="keamanandanTentang">
+    <section id="keamanandanTentang" style="display: none">
       <!-- start for keamanan -->
 
       <div
@@ -280,9 +285,49 @@
                       border-radius: 10px;
                       font-size: 12px;
                     "
+                    id="openProfile"
                   >
                     Open Profile
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- profile -->
+          <div id="profileMe">
+            <i class="x bi-x-lg" id="x"></i>
+            <img src="https://i.gifer.com/UUcK.gif" alt="" />
+            <div class="container-profile">
+              <div class="image-profile">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9fzDT5-hvDqPUQ23kk85xdS6xD6A-tebAQ&s"
+                  alt=""
+                  style="width: 100px; height: 100px; background-color: black"
+                />
+              </div>
+              <div class="profile-user">
+                <div class="title">
+                  <h2
+                    style="
+                      text-align: center;
+                      font-family: sans-serif;
+                      padding-top: 70px;
+                      font-size: 30px;
+                    "
+                  >
+                    Rado Hidayatulloh
+                  </h2>
+                </div>
+
+                <div class="media-social">
+                  <div class="container-medsos">
+                    <div class="icon">
+                      <i class="tiktok bi-tiktok"></i>
+                      <i class="instagram bi-instagram"></i>
+                      <i class="whatsapp bi-whatsapp"></i>
+                      <i class="telegram bi-telegram"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -296,4 +341,5 @@
   <!-- script javascript -->
   <script src="/dashboard/dashboard-backend/dashboard-js/dashboard.js"></script>
   <script src="/dashboard/dashboard-backend/account-backend/file.js"></script>
+  <script src="/dashboard/dashboard-ui/account-user/account.js"></script>
 </html>
