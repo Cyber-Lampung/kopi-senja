@@ -1,0 +1,76 @@
+/* layar hp */
+
+@media screen and (max-width: 468px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    padding: 5% 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    color: white;
+    position: relative;
+    z-index: 9999999;
+  }
+
+  header .title h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+
+  header #navbar ul {
+    position: absolute;
+    display: flex;
+    padding: 30px;
+    top: 65px;
+    left: -250px;
+    display: flex;
+    width: 60%;
+    gap: 3rem;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    border-top-right-radius: 20px;
+    border-end-end-radius: 50px;
+  }
+
+  header #navbar ul li {
+    list-style: none;
+  }
+
+  header #navbar ul li a {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+    display: inline-block;
+  }
+
+  header #navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+
+  header #navbar ul li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  header .menuNav {
+    font-size: 25px;
+  }
+}

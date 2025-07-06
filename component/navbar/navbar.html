@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="/component/navbar/navbar.css" />
+    <!-- link bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>Admin Dashboard</h1>
+      </div>
+      <nav id="navbar">
+        <ul id="nav">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/TambahProduk">Tambah Produk</a></li>
+          <li><a href="/setting">Setting</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu">
+        <label for="menu">
+          <i class="menuNav bi-list"></i>
+        </label>
+        <input type="checkbox" id="menu" hidden />
+      </div>
+    </header>
+  </body>
+
+  <script type="module" src="navbar.js"></script>
+</html>

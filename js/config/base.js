@@ -6,4 +6,7 @@ let conn = mysql.createConnection({
   pass: "",
 });
 
-console.log(conn);
+conn.connect(function (err) {
+  if (err) throw err;
+  console.log("connection");
+});

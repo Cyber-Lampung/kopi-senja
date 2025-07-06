@@ -32,6 +32,7 @@ function profileMe() {
   x.addEventListener("click", () => {
     if (x.click) {
       profile.style.display = "none";
+      profile.style.transition = "all 2s ease";
     }
   });
 }

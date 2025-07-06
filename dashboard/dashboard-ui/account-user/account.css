@@ -46,7 +46,7 @@
   header #navbar-list ul {
     background-color: black;
     width: 300px;
-    height: 200px;
+    height: 270px;
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -162,6 +162,7 @@
     margin: auto;
     left: 10px;
     transition: all 4s ease;
+    animation: animation 1s ease-in-out;
   }
 
   #profileMe .x {
@@ -172,12 +173,20 @@
     left: 320px;
     font-size: 30px;
     font-weight: bold;
+    animation: out 1s ease;
   }
 
   #profileMe > img {
     width: 370px;
     height: 550px;
     border-radius: 30px;
+  }
+
+  #profileMe .container-profile {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    transform: scale(1.1);
   }
 
   #profileMe .container-profile .image-profile {
@@ -216,5 +225,25 @@
     display: flex;
     gap: 2rem;
     font-size: 25px;
+  }
+
+  @keyframes animation {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes out {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(0);
+    }
   }
 }
