@@ -3,8 +3,6 @@ const ReadFile = require("fs");
 
 http
   .createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-
     switch (req.url) {
       case "/about":
         ReadFile.readFile("../../index/index.html", (err, data) => {
@@ -21,6 +19,19 @@ http
         res.addListener("error", () => {
           res.write("ok");
         });
+        break;
+
+      case "/api":
+        res.writeHead(200, {
+          "Content-Type": "application/json",
+          "access-control-allow-origin": "True",
+        });
+        fetch("http://localhost:3000/api")
+          .then((response) => response.json())
+          .then((data) => {
+            res.write(data);
+          });
+        break;
     }
     res.end();
   })

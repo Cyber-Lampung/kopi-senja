@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Produk</title>
+    <!-- link for css external -->
+    <link
+      rel="stylesheet"
+      href="/dashboard-admin/publik-css-admin/TambahProduk.css"
+    />
+    <!-- global css -->
+    <link rel="stylesheet" href="/src/css/global.css" />
+    <!-- link for bostrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div id="Headernavbar"></div>
+
+    <section id="TambahProduk">
+      <!-- append produk admin -->
+      <div class="container-produk">
+        <div class="title-produk">
+          <h2>Tambah Produk</h2>
+        </div>
+        <div class="box-tambahProduk">
+          <div class="namaProduk">
+            <p class="ProdukT">Nama Produk</p>
+            <div class="input-produk">
+              <input
+                class="inputValue"
+                id="nameProduk"
+                type="text"
+                placeholder="Input Name"
+              />
+            </div>
+          </div>
+          <div class="decs">
+            <p class="ProdukT">Decripsi Produk</p>
+            <div class="input-produk">
+              <textarea
+                class="textarea"
+                cols="30"
+                rows="5"
+                id="decs"
+                placeholder="Decripsi Produk"
+              ></textarea>
+            </div>
+          </div>
+          <div class="uploadImage">
+            <p class="ProdukT">Upload Image Produk</p>
+            <div class="uploadForm">
+              <input type="file" value="Upload File" id="upload" />
+            </div>
+          </div>
+
+          <div class="btn-UploadBerkas">
+            <button id="BtnTambahProduk">Tambah Produk</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="/dashboard-admin/ux/appendFile.js"></script>
+  <script type="module" src="/dashboard-admin/ux/TambahProduk.js"></script>
+</html>

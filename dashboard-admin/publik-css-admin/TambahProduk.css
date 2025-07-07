@@ -1,0 +1,83 @@
+/* media for layar hp */
+
+@media screen and (max-width: 468px) {
+  #TambahProduk {
+    margin-top: 30px;
+  }
+
+  .container-produk {
+    width: 90%;
+    margin: auto;
+  }
+
+  .title-produk {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .box-tambahProduk {
+    margin-top: 60px;
+  }
+
+  .ProdukT {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .input-produk .inputValue {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 250px;
+    height: 35px;
+    padding: 10px;
+    outline: none;
+    font-family: sans-serif;
+    border: solid 2px black;
+    border-radius: 10px;
+  }
+
+  .decs {
+    margin-top: 40px;
+  }
+
+  .textarea {
+    margin-left: 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+  .uploadImage {
+    margin-top: 30px;
+  }
+
+  .uploadForm {
+    margin-left: 20px;
+  }
+
+  .btn-UploadBerkas {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #upload {
+    outline: none;
+  }
+
+  #BtnTambahProduk {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to left, blue, red);
+  }
+}
