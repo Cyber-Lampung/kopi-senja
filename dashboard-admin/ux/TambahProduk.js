@@ -14,8 +14,9 @@ function TambahProduk() {
 
     //   check data
 
-    if (nameProduk === null || decs === null || image === null) {
+    if (!nameProduk || !decs || !image) {
       console.log("gagal get data empety value");
+      return;
     }
 
     try {
@@ -25,26 +26,18 @@ function TambahProduk() {
         image: image,
       };
 
-      objekData.push(ObjekProduk);
-
-      //   fetch data
+      //   fetch data simulasi
 
       fetch("http://localhost:3000/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          nama: nameProduk,
-          decs: decs,
-          image: image,
-        }),
+        body: JSON.stringify(ObjekProduk),
       });
     } catch {
       console.log("gagal ambil data");
     }
-
-    console.log(objekData);
   });
 }
 

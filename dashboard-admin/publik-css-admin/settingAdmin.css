@@ -1,0 +1,126 @@
+/* media for css mobile */
+
+@media screen and (max-width: 468px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #SectionNavbar {
+    width: 90%;
+    margin: auto;
+  }
+
+  #SectionNavbar .title-sectionSetting {
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+
+  #SectionNavbar .container-icon-setting {
+    margin-top: 30px;
+  }
+
+  #SectionNavbar .container-icon-setting .icon-list {
+    background-color: black;
+    width: 350px;
+    height: 50px;
+    margin: auto;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  #SectionNavbar .container-icon-setting .icon-list .icon {
+    display: flex;
+    gap: 3.5rem;
+    color: white;
+  }
+
+  #SectionNavbar .container-icon-setting .icon-list .icon i {
+    font-size: 20px;
+  }
+
+  #Container-section-person {
+    margin-top: 30px;
+  }
+
+  #Container-section-person .box-border .box-person {
+    width: 90%;
+    height: 500px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0);
+  }
+
+  .box-person .image {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .box-person .image > img {
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
+    border-radius: 100px;
+  }
+
+  .informationUser {
+    width: 100%;
+    margin: 60px auto;
+    color: black;
+  }
+
+  .informationUser .valueuser {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  .informationUser .Email,
+  .username,
+  .password {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+  }
+
+  .informationUser .Email,
+  .username,
+  .password .text-pri {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .informationUser .Email,
+  .username,
+  .password .text-sec {
+    font-size: 13px;
+  }
+
+  /* admin setting page */
+
+  .container-setting-admin,
+  .container-shield-admin,
+  .container-logout-admin {
+    width: 90%;
+    margin: auto;
+  }
+
+  .container-setting-admin,
+  .container-shield-admin,
+  .container-logout-admin .title {
+    text-align: start;
+    font-family: sans-serif;
+  }
+
+  .setting-box,
+  .shield-box,
+  .logout-box {
+    display: none;
+  }
+}

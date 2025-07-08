@@ -1,0 +1,55 @@
+/* for media screen mobile */
+
+@media screen and (max-width: 468px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* section */
+
+  #ListUser {
+    width: 90%;
+    margin: auto;
+  }
+
+  #ListUser .title {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #ListUser .search-user {
+    margin-top: 40px;
+  }
+
+  #ListUser .search-user h2 {
+    margin-bottom: 30px;
+  }
+
+  #ListUser .search-user input {
+    padding: 10px;
+    width: 300px;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-family: sans-serif;
+    outline: none;
+  }
+
+  #ListUser .search-user .table-user .table {
+    margin-top: 30px;
+  }
+
+  #ListUser .search-user .table-user table,
+  th,
+  td {
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
