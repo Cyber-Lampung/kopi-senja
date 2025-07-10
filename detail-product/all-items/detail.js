@@ -76,7 +76,7 @@ document.querySelector(".arrow-left").addEventListener("click", (r) => {
   r.preventDefault();
 
   setTimeout(() => {
-    window.location.href = "/index/index.html";
+    window.location.href = "/moreproduct";
   }, 1000);
 });
 
@@ -126,7 +126,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "../../cart/cart-pesan/cart.html";
+    window.location.href = "cart.html";
   });
 }
 
@@ -197,3 +197,15 @@ const cartProduct = () => {
 };
 
 cartProduct();
+
+async function getItemsDataBeli() {
+  await fetch("http://localhost:3000/dataItems", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      identiti: iden,
+    }),
+  });
+}

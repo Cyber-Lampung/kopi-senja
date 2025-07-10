@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Product</title>
-    <link rel="stylesheet" href="/detail-product/all-items/detail.css" />
+    <link rel="stylesheet" href="/detail.css" />
     <!-- link bostrap -->
     <link
       rel="stylesheet"
@@ -15,9 +15,7 @@
     <header class="detail">
       <nav>
         <i class="arrow-left bi-arrow-left"></i>
-        <i class="shoping-cart bi-cart"
-          ><span id="items"></span
-        ></i>
+        <i class="shoping-cart bi-cart"><span id="items"></span></i>
       </nav>
     </header>
 
@@ -37,13 +35,11 @@
           </div>
 
           <div class="decs-product">
-            <p id="decs-items">
-              
-            </p>
+            <p id="decs-items"></p>
           </div>
 
           <div class="harga">
-            <div>Harga : <span id="harga"></span></span></div>
+            <div>Harga : <span id="harga"></span></div>
           </div>
 
           <div class="jumlah-pesanan">
@@ -56,6 +52,8 @@
             <p class="text">Total Harga : <span id="total"></span></p>
           </div>
 
+          <div id="itemsdata"></div>
+
           <div class="plus-minus">
             <button id="cart">cart</button>
           </div>
@@ -63,8 +61,7 @@
       </article>
     </main>
 
-    <script type="module" src="/detail-product/all-items/detail.js"></script>
-    <script type="module" src="/data-product/items/api-produck/produc.js"></script>
-
+    <script type="module" src="/detail.js"></script>
+    <script type="module" src="/produc.js"></script>
   </body>
 </html>

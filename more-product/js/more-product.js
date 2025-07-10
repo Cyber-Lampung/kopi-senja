@@ -47,7 +47,7 @@ const back = document.querySelector(".back");
 
 back.addEventListener("click", () => {
   setTimeout(() => {
-    window.location.href = "../../../index/index.html";
+    window.location.href = "/";
   }, 1000);
 });
 
@@ -58,7 +58,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "../../cart/cart-pesan/cart.html";
+    window.location.href = "/cart";
   });
 }
 

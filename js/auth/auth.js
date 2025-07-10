@@ -22,18 +22,34 @@ form.addEventListener("submit", (e) => {
 
   // push user in data user
 
-  const objUser = {
-    email: email,
-    user: user,
-    password: pass,
-  };
-  const userJson = JSON.stringify(objUser);
-  dataUserLogin.push(objUser);
-  localStorage.setItem("localuser", userJson);
+  // const objUser = {
+  //   email: email,
+  //   user: user,
+  //   password: pass,
+  // };
+  // const userJson = JSON.stringify(objUser);
+  // dataUserLogin.push(objUser);
+  // localStorage.setItem("localuser", userJson);
 
-  setTimeout(() => {
-    localStorage.removeItem("localuser");
-  }, 20000);
+  // setTimeout(() => {
+  //   localStorage.removeItem("localuser");
+  // }, 20000);
+
+  fetch("http://localhost:3000/api", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+      username: user,
+      password: pass,
+    }),
+  })
+    .then((response) => response.json())
+    .then((user) => {
+      console.log("data berhasil terkirim", user);
+    });
 
   // end user inputan
 });
