@@ -697,6 +697,7 @@ const server = http.createServer((req, res) => {
   console.log(`berjalan pada url http://127.0.0.1:3000${req.url} `);
 });
 
-server.listen(3000, "127.0.0.1", () => {
-  console.log("server berjalan pada port 3000");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
