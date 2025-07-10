@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node /js/server/server.js"
+    "start": "node js/server/server.js"
   }
 }
