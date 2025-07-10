@@ -126,7 +126,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "cart.html";
+    window.location.href = "/cart";
   });
 }
 
@@ -134,21 +134,32 @@ cart();
 
 // button to append cart product
 
-const cartProduct = () => {
-  const itemsData = document.getElementById("itemsData");
+export let arrayDataItem = [];
+
+//
+export function cartProduct() {
   const btn = document.getElementById("cart");
   btn.addEventListener("click", () => {
+    const itemsData = document.getElementById("itemsData");
+    console.log(itemsData);
+
+    const dataObjek = {
+      jenis: iden.innerHTML,
+      totalProduk: jumlahData,
+      total: totalJumlah + ".000",
+    };
+
     // data elemen html
     const div = (document.createElement("div").innerHTML = `
 
     <div id="data">
                 <div class="items">
                   <div class="jenis-items">
-                    <h4>Kopi gula aren</h4>
+                    <h4>${dataObjek.jenis}</h4>
                   </div>
                   <br />
                   <div class="harga">
-                    <h5>Rp. 5000</h5>
+                    <h5>Rp. ${dataObjek.total}</h5>
                   </div>
                 </div>
 
@@ -171,7 +182,7 @@ const cartProduct = () => {
                     <span
                       style="font-family: sans-serif; font-size: 15px"
                       id="jumlah"
-                      >2</span
+                      >${dataObjek.totalProduk}</span
                     >
                     <button
                       style="
@@ -194,18 +205,6 @@ const cartProduct = () => {
 
     itemsData.append(div);
   });
-};
+}
 
 cartProduct();
-
-async function getItemsDataBeli() {
-  await fetch("http://localhost:3000/dataItems", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      identiti: iden,
-    }),
-  });
-}
