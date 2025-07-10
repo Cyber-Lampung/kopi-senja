@@ -1,6 +1,5 @@
 const http = require("http");
 const fs = require("fs");
-const path = require("path");
 
 // automatisasi content-type
 
@@ -18,15 +17,12 @@ const server = http.createServer((req, res) => {
 
   switch (req.url) {
     case "/":
-      fs.readFile(path.join(__dirname, "../index/index.html"), (err, data) => {
-        if (err) {
-          res.writeHead(404);
-          res.end("File not found");
-          return;
-        }
+      fs.readFile("../../index/index.html", (err, index) => {
+        if (err) throw err;
 
         res.writeHead(200, html);
-        res.end(data);
+        res.write(index);
+        res.end();
       });
       break;
 
