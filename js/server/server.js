@@ -12,7 +12,7 @@ const extention = {
 };
 
 const server = http.createServer((req, res) => {
-  fs.readFile("../../" + req.url, (err, data) => {
+  fs.readFile("../.." + req.url, (err, data) => {
     for (const ext in extention) {
       const found = req.url.endsWith(ext);
       if (err) throw err;
@@ -23,10 +23,6 @@ const server = http.createServer((req, res) => {
       }
     }
   });
-
-  if (req.url === "/") {
-    console.log("home");
-  }
 });
 
 const PORT = process.env.PORT || 3000;
