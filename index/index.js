@@ -25,28 +25,46 @@ function navbar() {
 navbar();
 
 function search() {
-  // element htmla
+  // element html
 
-  const formsearch = document.getElementById("search-form");
+  const searchForm = document.getElementById("searchForm");
 
-  formsearch.addEventListener("submit", (r) => {
-    r.preventDefault();
+  searchForm.addEventListener("submit", (s) => {
+    s.stopPropagation();
+    s.preventDefault();
 
-    // ambil data value dari judul items
-
+    const input = document.getElementById("search").value;
     const card = document.querySelectorAll(".card");
-    const valueJudul = document.querySelectorAll(".card span");
-    const inputSearch = document.getElementById("search").value.toLowerCase();
+    const cardText = document.querySelectorAll(".identity-kopi p");
 
-    if (inputSearch == "") {
-      console.log("not value");
-    }
+    cardText.forEach((items) => {
+      try {
+        const data = items.outerText;
 
-    valueJudul.forEach((items) => {
-      if (items.innerHTML.toLowerCase().includes(inputSearch.toLowerCase())) {
-        card.style.display = "none";
-      } else {
-        card.style.display = "none";
+        const endSearch = input.toLowerCase() == data.toLowerCase();
+
+        if (endSearch === true) {
+          card.forEach((item) => {
+            let found = false;
+            const dataC = item.children.item(1).innerText.toLowerCase();
+
+            if (dataC == input) {
+              found = true;
+            }
+
+            if (found) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+
+            setTimeout(() => {
+              item.style.display = "block";
+            }, 5000);
+          });
+        }
+      } catch {
+        console.log("err");
       }
     });
   });

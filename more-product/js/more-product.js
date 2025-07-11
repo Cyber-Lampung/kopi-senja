@@ -63,3 +63,45 @@ function cart() {
 }
 
 cart();
+
+function searchForm() {
+  const searchForm = document.getElementById("searchForm");
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const input = document.getElementById("search").value;
+    const card = document.querySelectorAll(".card");
+    const cardText = document.querySelectorAll(".identity-kopi p");
+
+    cardText.forEach((items) => {
+      const data = items.outerText.toLowerCase();
+
+      const endSearch = input === data;
+
+      if (endSearch === true) {
+        card.forEach((item) => {
+          let found = false;
+
+          const dataC = item.children.item(1).innerText.toLowerCase();
+
+          if (dataC == input.toLowerCase()) {
+            found = true;
+          }
+
+          if (found) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+
+          setTimeout(() => {
+            item.style.display = "block";
+          }, 4000);
+        });
+      }
+    });
+  });
+}
+
+searchForm();

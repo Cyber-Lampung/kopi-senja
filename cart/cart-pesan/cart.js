@@ -4,7 +4,7 @@ function navigasicart() {
 
   back.addEventListener("click", () => {
     setTimeout(() => {
-      window.location.href = "/detail";
+      window.location.href = "/detail-product/all-items/detail.html";
     }, 1000);
   });
 

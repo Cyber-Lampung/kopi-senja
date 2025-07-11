@@ -126,7 +126,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "/cart";
+    window.location.href = "/cart/cart-pesan/cart.html";
   });
 }
 
