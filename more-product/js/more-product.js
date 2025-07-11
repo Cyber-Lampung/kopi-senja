@@ -47,7 +47,7 @@ const back = document.querySelector(".back");
 
 back.addEventListener("click", () => {
   setTimeout(() => {
-    window.location.href = "/";
+    window.location.href = "/index/index.html";
   }, 1000);
 });
 

@@ -82,7 +82,7 @@ export function getDataId(dataProduck) {
                             buttons.addEventListener("click", () => {
                               setTimeout(() => {
                                 window.location.href =
-                                  "/animation-loading-items/loadng.html?next=/detail-product/all-items/detail.html";
+                                  "/detail-product/all-items/detail.html";
                               }, 100);
                             });
                           } catch {

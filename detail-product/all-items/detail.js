@@ -76,7 +76,7 @@ document.querySelector(".arrow-left").addEventListener("click", (r) => {
   r.preventDefault();
 
   setTimeout(() => {
-    window.location.href = "/moreproduct";
+    window.location.href = "/more-product/html/more-product.html";
   }, 1000);
 });
 
