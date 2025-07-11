@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
   fs.readFile("../.." + req.url, (err, data) => {
     for (const ext in extention) {
       const found = req.url.endsWith(ext);
-      if (err) throw err;
+
       if (found === true) {
         res.writeHead(200, extention[ext]);
         res.write(data);
