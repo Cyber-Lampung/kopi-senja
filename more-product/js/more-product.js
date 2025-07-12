@@ -24,8 +24,6 @@ product.forEach((items) => {
     const dataK = dataJ.dataset.id;
     if (items.id.includes(dataK)) {
       dataJ.append(items.jenis);
-    } else {
-      console.log("no");
     }
   });
 });
@@ -37,15 +35,14 @@ product.forEach((items) => {
     const dataK = dataD.dataset.id;
     if (items.id.includes(dataK)) {
       dataD.append(items.decs);
-    } else {
-      console.log("no");
     }
   });
 });
 
 const back = document.querySelector(".back");
 
-back.addEventListener("click", () => {
+back.addEventListener("click", (e) => {
+  e.preventDefault();
   setTimeout(() => {
     window.location.href = "/index/index.html";
   }, 1000);
@@ -58,7 +55,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "/cart";
+    window.location.href = "/cart/cart-pesan/cart.html";
   });
 }
 

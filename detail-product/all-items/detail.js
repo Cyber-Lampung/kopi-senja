@@ -1,16 +1,8 @@
-function ubahButoon() {
-  const button = document.getElementById("cart");
+import { itemsData } from "../../cart/cart-pesan/cart.js";
 
-  button.addEventListener("click", () => {
-    if (button.click) {
-      setTimeout(() => {
-        button.disabled;
-      }, 1000);
-    }
-  });
-}
+// global array for noive
 
-ubahButoon();
+export const dataNotive = [];
 
 // data global function dataclick
 let jumlahAwal = 0;
@@ -90,9 +82,10 @@ harga.append(localStorage.getItem("harga"));
 image.src = "../../" + localStorage.getItem("image");
 decs.append(localStorage.getItem("decs"));
 
+// send button global
+
 function button() {
   const button = document.getElementById("cart");
-
   button.addEventListener("click", () => {
     localStorage.setItem("total", totalJumlah);
 
@@ -126,7 +119,7 @@ function cart() {
   cart.addEventListener("click", (e) => {
     e.preventDefault();
 
-    window.location.href = "/cart/cart-pesan/cart.html";
+    window.location.href = "../../cart/cart-pesan/cart.html";
   });
 }
 
@@ -140,9 +133,7 @@ export let arrayDataItem = [];
 export function cartProduct() {
   const btn = document.getElementById("cart");
   btn.addEventListener("click", () => {
-    const itemsData = document.getElementById("itemsData");
     console.log(itemsData);
-
     const dataObjek = {
       jenis: iden.innerHTML,
       totalProduk: jumlahData,
@@ -202,8 +193,6 @@ export function cartProduct() {
     `);
 
     // panggil element itemsData
-
-    itemsData.append(div);
   });
 }
 

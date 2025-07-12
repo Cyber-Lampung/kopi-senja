@@ -4,7 +4,7 @@ function navigasicart() {
 
   back.addEventListener("click", () => {
     setTimeout(() => {
-      window.location.href = "/detail-product/all-items/detail.html";
+      window.location.href = "/more-product/html/more-product.html";
     }, 1000);
   });
 
@@ -18,3 +18,5 @@ function navigasicart() {
 navigasicart();
 
 // ambil data dai html
+
+export const itemsData = document.getElementById("itemsData");
