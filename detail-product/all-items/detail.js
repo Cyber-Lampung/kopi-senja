@@ -1,8 +1,4 @@
-import { itemsData } from "../../cart/cart-pesan/cart.js";
-
 // global array for noive
-
-export const dataNotive = [];
 
 // data global function dataclick
 let jumlahAwal = 0;
@@ -125,75 +121,22 @@ function cart() {
 
 cart();
 
-// button to append cart product
+export const produk = [];
 
-export let arrayDataItem = [];
+function cartD() {
+  const btnclick = document.getElementById("cart");
 
-//
-export function cartProduct() {
-  const btn = document.getElementById("cart");
-  btn.addEventListener("click", () => {
-    console.log(itemsData);
-    const dataObjek = {
-      jenis: iden.innerHTML,
-      totalProduk: jumlahData,
-      total: totalJumlah + ".000",
+  btnclick.addEventListener("click", () => {
+    const dataProduk = {
+      NameProduk: localStorage.getItem("identity"),
+      jumlahProduk: localStorage.getItem("nilai"),
+      total: `${localStorage.getItem("total")}.000`,
     };
 
-    // data elemen html
-    const div = (document.createElement("div").innerHTML = `
-
-    <div id="data">
-                <div class="items">
-                  <div class="jenis-items">
-                    <h4>${dataObjek.jenis}</h4>
-                  </div>
-                  <br />
-                  <div class="harga">
-                    <h5>Rp. ${dataObjek.total}</h5>
-                  </div>
-                </div>
-
-                <div class="navigasi-items">
-                  <div
-                    class="plus-minus"
-                    style="display: flex; gap: 1rem; align-items: center"
-                  >
-                    <button
-                      style="
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 6px;
-                        background-color: transparent;
-                        border: solid 2px black;
-                      "
-                    >
-                      +
-                    </button>
-                    <span
-                      style="font-family: sans-serif; font-size: 15px"
-                      id="jumlah"
-                      >${dataObjek.totalProduk}</span
-                    >
-                    <button
-                      style="
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 6px;
-                        background-color: transparent;
-                        border: solid 2px black;
-                      "
-                    >
-                      -
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-    `);
-
-    // panggil element itemsData
+    produk.push(dataProduk);
+    console.log(produk);
+    console.log(data);
   });
 }
 
-cartProduct();
+cartD();
