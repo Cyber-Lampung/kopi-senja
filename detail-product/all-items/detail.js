@@ -30,18 +30,26 @@ function dataclick() {
     totalJumlah = hargaawal * jumlahData;
 
     totalHarga.textContent = ` Rp. ${totalJumlah}.000 `;
+
+    if ((jumlahData) => 0) {
+      jumlahPesanan.style.display = "block";
+      totalHarga.style.display = "inline-block";
+    }
   });
 
   kurang.addEventListener("click", () => {
     jumlahData = jumlahAwal -= 1;
 
     localStorage.setItem("nilai", jumlahData);
+    jumlahPesanan.textContent = jumlahData;
 
-    if (jumlahData === 0) {
-      console.log("batas pemesanan");
+    if (jumlahData <= 0) {
       jumlahPesanan.textContent = 0;
-    } else {
-      jumlahPesanan.textContent = jumlahData;
+      jumlahPesanan.style.display = "none";
+    }
+
+    if (jumlahData.startsWith("-")) {
+      totalHarga.textContent = "0.000";
     }
 
     if (items.classList == "items") {
@@ -51,7 +59,6 @@ function dataclick() {
     // pengurangan harga ketika penambahan
 
     totalJumlah -= hargaawal;
-
     totalHarga.textContent = `Rp. ${totalJumlah}.000`;
   });
 }
@@ -134,8 +141,6 @@ function cartD() {
     };
 
     produk.push(dataProduk);
-    console.log(produk);
-    console.log(data);
   });
 }
 

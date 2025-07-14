@@ -17,6 +17,12 @@ function navigasicart() {
 
 navigasicart();
 
-// ambil data dai html
+// ambil data dari localStorage
 
-export const itemsData = document.getElementById("itemsData");
+const dataProduk = {
+  NameProduk: localStorage.getItem("identity"),
+  jumlahProduk: localStorage.getItem("nilai"),
+  total: `${localStorage.getItem("total")}.000`,
+};
+
+console.log(dataProduk);
