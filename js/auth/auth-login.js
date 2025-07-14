@@ -1,43 +1,31 @@
-const localArray = [];
-// form start
-const form = document.getElementById("form");
+import { datauser } from "../../js/auth/auth.js";
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+console.log(datauser);
 
-  // save user to aray
+function login() {
+  const formLogin = document.getElementById("formLogin");
 
-  const local = localStorage.getItem("localuser");
+  formLogin.addEventListener("submit", (r) => {
+    r.preventDefault();
 
-  let localtoObjek = JSON.parse(local);
+    // login logic
 
-  localArray.push(localtoObjek);
+    const username = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
 
-  // user inputan
+    // validasi user login ya 😁😁
 
-  const user = document.getElementById("user").value;
-  const pass = document.getElementById("pass").value;
+    if (username === "" || password === "") {
+      console.log("not valid inputan kosong");
+    }
 
-  //console.log(email, user, pass);
+    // validasi value length password
+    if (password.length <= 8) {
+      console.log("password kurang dari 8");
+    }
 
-  if (pass.length <= 8) {
-    console.log("no strong password");
-  }
+    // jika validasi lolos semua maka lanjut ke tahap pengecekan
+  });
+}
 
-  // push user in data user
-
-  // login users
-
-  let foundUser = localtoObjek.user === user && localtoObjek.password === pass;
-
-  if (foundUser) {
-    // redirect to dashboard jika ketemu to acount
-
-    window.location.href = "../../dashboard/dashboard-ui/dashboard.html";
-  } else {
-    console.log("user not found ");
-  }
-
-  console.log(localArray);
-  // end user inputan
-});
+login();

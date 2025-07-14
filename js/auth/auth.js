@@ -1,55 +1,42 @@
-export const dataUserLogin = [];
+// save user credential
 
-const form = document.getElementById("form");
+export const datauser = [];
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+function sign() {
+  // value user
 
-  // user inputan
+  const formSign = document.getElementById("form");
 
-  const email = document.getElementById("email").value;
-  const user = document.getElementById("user").value;
-  const pass = document.getElementById("pass").value;
+  formSign.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  //console.log(email, user, pass);
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
 
-  if (pass.length <= 8) {
-    console.log("no strong password");
-    document.getElementById("pass").style.border = "solid 2px red";
-  } else if (pass.length >= 8) {
-    document.getElementById("pass").style.border = "none";
-  }
+    // validasi value user
 
-  // push user in data user
+    if (email === "" || username === "" || password === "") {
+      console.log("not value user");
+    }
 
-  // const objUser = {
-  //   email: email,
-  //   user: user,
-  //   password: pass,
-  // };
-  // const userJson = JSON.stringify(objUser);
-  // dataUserLogin.push(objUser);
-  // localStorage.setItem("localuser", userJson);
+    // strong password minimal 8 character
+    if (password.length <= 8) {
+      console.log("not strong password");
+    }
 
-  // setTimeout(() => {
-  //   localStorage.removeItem("localuser");
-  // }, 20000);
+    // save user credential to send objek
 
-  fetch("http://localhost:3000/api", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+    const dataUser = {
       email: email,
-      username: user,
-      password: pass,
-    }),
-  })
-    .then((response) => response.json())
-    .then((user) => {
-      console.log("data berhasil terkirim", user);
-    });
+      username: username,
+      password: password,
+    };
 
-  // end user inputan
-});
+    datauser.push(dataUser);
+
+    console.log(datauser);
+  });
+}
+
+sign();
