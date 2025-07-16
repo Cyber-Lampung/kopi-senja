@@ -1,31 +1,53 @@
-import { datauser } from "../../js/auth/auth.js";
+function getUser() {
+  const form = document.getElementById("formLogin");
 
-console.log(datauser);
+  form.addEventListener("submit", (e) => {
+    // no auto refresh
+    e.preventDefault();
+    e.stopPropagation();
 
-function login() {
-  const formLogin = document.getElementById("formLogin");
+    // ambil name dari setiap element
 
-  formLogin.addEventListener("submit", (r) => {
-    r.preventDefault();
+    const username = form.user.value;
+    const password = form.pass.value;
 
-    // login logic
+    // memastikan inputan tidak kosong
 
-    const username = document.getElementById("user").value;
-    const password = document.getElementById("pass").value;
-
-    // validasi user login ya 😁😁
-
-    if (username === "" || password === "") {
-      console.log("not valid inputan kosong");
+    if (!username || !password) {
+      console.log("not value invalid");
     }
 
-    // validasi value length password
-    if (password.length <= 8) {
-      console.log("password kurang dari 8");
+    // ambil user dari localStorage
+
+    const user = localStorage.getItem("dataUser");
+
+    // parse
+    const dataUser = JSON.parse(user);
+
+    // validasi jika user ada dan redirect
+
+    const validasiUser =
+      dataUser.user.includes(username) &&
+      dataUser.pass.includes(btoa(password));
+
+    console.log(validasiUser);
+
+    if (validasiUser) {
+      console.log((document.cookie = btoa(username) + "test cookie"));
     }
 
-    // jika validasi lolos semua maka lanjut ke tahap pengecekan
+    // if (
+    //   dataUser.email.includes(username) ||
+    //   (dataUser.user.includes(username) &&
+    //     dataUser.pass.includes(btoa(password)))
+    // ) {
+    //   console.log("user ditemukan");
+    // } else {
+    //   console.error((error) => {
+    //     console.log("Meassage : ", error);
+    //   });
+    // }
   });
 }
 
-login();
+getUser();

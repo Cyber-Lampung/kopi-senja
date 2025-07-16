@@ -1,26 +1,103 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  overflow: hidden;
-  width: 100%;
-}
+  section > img {
+    width: 100%;
+    object-fit: cover;
+    inset: 0 0 0 0;
+    position: absolute;
+    height: 100vh;
+  }
 
-.form-sign > img {
-  width: 100%;
-  max-width: 1200px;
-  height: 100vh;
-  object-fit: cover;
-  inset: 0 0 0 0;
-  display: flex;
-  justify-content: center;
-}
+  .image-sign {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30px;
+  }
 
-#form {
-  position: absolute;
-  top: 0;
-  left: 20px;
+  .container-sign-form {
+    position: relative;
+    margin: auto;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    top: -50px;
+    box-shadow: 0px 0px 20px 0px white;
+  }
+
+  .container-box {
+    display: flex;
+    justify-content: start;
+    padding-top: 20px;
+    flex-direction: column;
+  }
+
+  .title-sign-form h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 27px;
+  }
+
+  .form-sign {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  #form-sign p {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  input {
+    width: 250px;
+    height: 40px;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(231, 128, 10, 0.417);
+    font-family: sans-serif;
+  }
+
+  .button-send {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+  }
+
+  .button-send button {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(to left, rgb(229, 97, 15));
+    border: solid 2px transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: grabbing;
+  }
+
+  .have-acount {
+    padding-top: 20px;
+  }
+
+  .have-acount .Acount {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .have-acount .Acount a {
+    color: blue;
+    text-decoration: none;
+  }
 }

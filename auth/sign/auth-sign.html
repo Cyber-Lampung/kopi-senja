@@ -3,164 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Page</title>
-    <!-- link css -->
+    <title>Form Sign</title>
+    <!-- link css external -->
     <link rel="stylesheet" href="auth-sign.css" />
   </head>
   <body>
-    <div class="form">
-      <div class="form-sign">
-        <img src="/image/auth-image/Desain-tanpa-judul.png" alt="" />
-        <form id="form" style="text-align: center; width: 90%; margin: auto">
-          <div
-            class="icon-coffe"
-            style="
-              top: 50px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-top: 40px;
-              margin-bottom: 20px;
-            "
-          >
-            <img
-              src="/image/auth-image/image-person.png"
-              alt=""
-              style="
-                border-radius: 50px;
-                width: 200px;
-                z-index: 1;
-                position: relative;
-                top: 20px;
-                border-radius: 400px;
-              "
-            />
+    <section>
+      <!-- image background -->
+      <img src="/image/auth-image/Desain-tanpa-judul.png" alt="" />
+
+      <div class="container-sign">
+        <div class="box-sign">
+          <div class="image-sign">
+            <img src="/image/auth-image/image-person.png" alt="" />
           </div>
-
-          <div
-            class="container-form"
-            style="
-              position: relative;
-              margin: 30px auto;
-              top: -70px;
-              width: 98%;
-              background-color: rgb(229, 212, 168);
-              height: 370px;
-              border-radius: 30px;
-              z-index: 9999;
-            "
-          >
-            <div
-              class="title-form"
-              style="
-                font-size: 26px;
-                font-weight: 900;
-                font-family: 'Courier New', Courier, sans-serif;
-                padding-top: 25px;
-              "
-            >
-              <p>Sign Up</p>
+        </div>
+        <div class="container-sign-form">
+          <div class="container-box">
+            <div class="title-sign-form">
+              <h2>Sign In | Kopi Shop</h2>
             </div>
-            <div class="inputan" style="margin-top: 30px">
-              <div class="email">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  style="
-                    width: 85%;
-                    margin: auto;
-                    font-family: sans-serif;
-                    margin-bottom: 10px;
-                    height: 35px;
-                    padding-left: 10px;
-                    border-radius: 10px;
-                    border: none;
-                    color: brown;
-                    outline: none;
-                    background-color: rgb(232, 220, 204);
-                  "
-                  id="email"
-                  required
-                />
-              </div>
+            <div class="form-sign">
+              <form id="form-sign">
+                <div class="email">
+                  <div class="label-email">
+                    <label for="email">
+                      <p>Email</p>
+                    </label>
+                    <br />
+                    <input type="email" placeholder="email" name="email" />
+                  </div>
+                </div>
+                <div class="username">
+                  <div class="label-user">
+                    <label for="user">
+                      <p>Username</p>
+                    </label>
+                    <br />
+                    <input type="text" placeholder="username" name="user" />
+                  </div>
+                </div>
+                <div class="password">
+                  <div class="label-pass">
+                    <label for="pass">
+                      <p>Password</p>
+                    </label>
+                    <br />
+                    <input type="password" placeholder="password" name="pass" />
+                  </div>
+                </div>
 
-              <div class="username">
-                <input
-                  type="text"
-                  placeholder="Username"
-                  style="
-                    width: 85%;
-                    margin: auto;
-                    font-family: sans-serif;
-                    margin-bottom: 10px;
-                    height: 35px;
-                    padding-left: 10px;
-                    border-radius: 10px;
-                    border: none;
-                    color: brown;
-                    outline: none;
-                    background-color: rgb(232, 220, 204);
-                  "
-                  id="user"
-                />
-              </div>
-              <div class="password">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  style="
-                    width: 85%;
-                    margin: auto;
-                    font-family: sans-serif;
-                    height: 35px;
-                    padding-left: 10px;
-                    border-radius: 10px;
-                    border: none;
-                    color: brown;
-                    outline: none;
-                    background-color: rgb(232, 220, 204);
-                  "
-                  id="pass"
-                />
-              </div>
-              <div class="button" style="margin-top: 30px">
-                <button
-                  type="submit"
-                  style="
-                    width: 150px;
-                    height: 40px;
-                    border-radius: 20px;
-                    border: none;
-                    background-color: rgba(158, 93, 36, 0.97);
-                    font-family: sans-serif;
-                    font-weight: 550;
-                    font-size: 20px;
-                    color: white;
-                  "
-                  id="button"
-                >
-                  Sign up
-                </button>
-              </div>
-              <div class="forgot-pass" style="margin-top: 30px">
-                <a
-                  href="/auth/login/auth-login.html"
-                  style="
-                    font-family: sans-serif;
-                    font-weight: 500;
-                    color: black;
-                    text-decoration: none;
-                  "
-                  >Have an account ? Log in
-                </a>
-              </div>
+                <!-- button send sign user -->
+                <div class="button-send">
+                  <button type="submit">Sign In</button>
+                </div>
+
+                <div class="have-acount">
+                  <span class="Acount">
+                    You Have Account ?
+                    <a href="/auth/login/auth-login.html">Login</a>
+                  </span>
+                </div>
+              </form>
             </div>
           </div>
-          <div id="notive"></div>
-        </form>
+        </div>
       </div>
-    </div>
-    <!-- script js -->
-    <script type="module" src="/js/auth/auth.js"></script>
+    </section>
+    <!-- script javascript -->
+    <script type="module" src="/js/auth/auth-sign.js"></script>
   </body>
 </html>
