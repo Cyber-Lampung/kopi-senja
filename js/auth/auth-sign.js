@@ -21,6 +21,7 @@ function getUser() {
 
     if (!email || !username || !password) {
       console.log("value not empety");
+      return;
     }
 
     // send value input ke localStorage
@@ -32,6 +33,24 @@ function getUser() {
     };
 
     localStorage.setItem("dataUser", JSON.stringify(user));
+
+    async function fetchUser(user) {
+      try {
+        const response = await fetch("http://localhost:3000/api", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        });
+        const result = await response.json();
+        console.log("data dari result : ", result);
+      } catch (error) {
+        console.log("Message : ", error);
+      }
+    }
+
+    fetchUser(user);
 
     // test
 

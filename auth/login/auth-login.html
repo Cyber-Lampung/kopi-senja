@@ -21,6 +21,9 @@
 
       <div class="container-login">
         <div class="container-box">
+          <div class="notive">
+            <span>Berhasil Login</span>
+          </div>
           <div class="icon">
             <div class="image-login">
               <img src="/image/auth-image/coffe.png" alt="" />
@@ -29,7 +32,7 @@
         </div>
         <div class="content-text">
           <div class="text-title">
-            <h1 id="text"></h1>
+            <h1 id="text">Kopi Senja | Login</h1>
           </div>
         </div>
         <div class="form">
@@ -94,14 +97,6 @@
       </div>
     </section>
     <script type="module" src="/js/auth/auth-login.js"></script>
-    <script>
-      const text = "Kopi Shop | Login";
-
-      for (let i = 0; i <= text.length; i++) {
-        setTimeout(() => {
-          document.getElementById("text").textContent = text.slice(0, i);
-        }, i * 200);
-      }
-    </script>
+    <!-- <script src="/js/animation/efekKetik.js"></script> -->
   </body>
 </html>

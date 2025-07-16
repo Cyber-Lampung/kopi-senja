@@ -34,7 +34,12 @@ function getUser() {
 
     if (validasiUser) {
       console.log((document.cookie = btoa(username) + "test cookie"));
+      const notive = (document.querySelector(".notive").style.top = "20px");
     }
+
+    setTimeout(() => {
+      document.querySelector(".notive").style.top = "-30px";
+    }, 5000);
 
     // if (
     //   dataUser.email.includes(username) ||
