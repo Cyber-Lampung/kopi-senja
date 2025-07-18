@@ -48,6 +48,13 @@ export const product = [
     image: "/image/image-product/kopi-susu.jpg",
     decs: "susu yang sangat enak sekali dengan  dicampur dengan jahe yang hangat.",
   },
+  {
+    id: "data-8",
+    jenis: "teh manis",
+    harga: "3.000",
+    image: "/image/image-product/kopi-susu.jpg",
+    decs: "susu yang sangat enak sekali dengan  dicampur dengan jahe yang hangat.",
+  },
 ];
 
 export function getDataId(dataProduck) {

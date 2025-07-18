@@ -22,10 +22,6 @@
         </div>
 
         <div class="container-nav-items">
-          <div class="humbergerMenu">
-            <i class="list bi-list"></i>
-          </div>
-
           <div class="inputSearch">
             <input type="text" name="search" id="search" placeholder="Search" />
           </div>
@@ -92,7 +88,7 @@
                   class="mainContentList"
                   style="display: flex; flex-direction: column; gap: 3rem"
                 >
-                  <div class="dashboard">
+                  <div class="dashboard" style="cursor: pointer">
                     <div
                       class="dashboardicon"
                       style="display: flex; align-items: center; gap: 1rem"
@@ -104,7 +100,7 @@
                       <p style="font-size: 14px">Dashboard</p>
                     </div>
                   </div>
-                  <div class="element">
+                  <div class="element" style="cursor: pointer">
                     <div
                       class="elementIcon"
                       style="display: flex; align-items: center; gap: 1rem"
@@ -113,32 +109,28 @@
                         style="font-size: 20px"
                         class="dashicon bi-pc-display-horizontal"
                       ></i>
-                      <p style="font-size: 14px">Elements</p>
-
-                      <div class="iconDown">
-                        <i class="downIcon bi-chevron-down"></i>
-                      </div>
+                      <p style="font-size: 14px">Produk</p>
                     </div>
                   </div>
-                  <div class="Widgets">
+                  <div class="Widgets" style="cursor: pointer">
                     <div
                       class="WidgetsIcon"
                       style="display: flex; align-items: center; gap: 1rem"
                     >
                       <i style="font-size: 20px" class="dashicon bi-bricks"></i>
-                      <p style="font-size: 14px">Widgets</p>
+                      <p style="font-size: 14px">Tambah Produk</p>
                     </div>
                   </div>
-                  <div class="Form">
+                  <div class="Form" style="cursor: pointer">
                     <div
                       class="formIcon"
                       style="display: flex; align-items: center; gap: 1rem"
                     >
                       <i
                         style="font-size: 20px"
-                        class="dashicon bi-keyboard-fill"
+                        class="dashicon bi-person-plus"
                       ></i>
-                      <p style="font-size: 14px">Form</p>
+                      <p style="font-size: 14px">List User</p>
                     </div>
                   </div>
                   <div class="tables">
@@ -146,35 +138,8 @@
                       class="tablesIcon"
                       style="display: flex; align-items: center; gap: 1rem"
                     >
-                      <i style="font-size: 20px" class="dashicon bi-table"></i>
-                      <p style="font-size: 14px">Tables</p>
-                    </div>
-                  </div>
-                  <div class="cart">
-                    <div
-                      class="cartIcon"
-                      style="display: flex; align-items: center; gap: 1rem"
-                    >
-                      <i
-                        style="font-size: 20px"
-                        class="dashicon bi-graph-up-arrow"
-                      ></i>
-                      <p style="font-size: 14px">Carts</p>
-                    </div>
-                  </div>
-                  <div class="Pages">
-                    <div
-                      class="pagesIcon"
-                      style="display: flex; align-items: center; gap: 1rem"
-                    >
-                      <i
-                        style="font-size: 20px"
-                        class="dashicon bi-file-earmark-text"
-                      ></i>
-                      <p style="font-size: 14px">Pages</p>
-                      <div class="iconDown">
-                        <i class="downIcon bi-chevron-down"></i>
-                      </div>
+                      <i style="font-size: 20px" class="dashicon bi-gear"></i>
+                      <p style="font-size: 14px">Setting</p>
                     </div>
                   </div>
                 </div>
@@ -186,7 +151,8 @@
     </nav>
 
     <main id="mainContent">
-      <aside>
+      <!-- aside for dashboard container -->
+      <aside id="dashboardContainer">
         <div class="container-main-content">
           <div class="items">
             <div
@@ -199,7 +165,7 @@
               ></i>
 
               <div class="wrapperText" style="font-size: 16px">
-                <p style="color: grey">Total Sale</p>
+                <p style="color: grey">Today Sale</p>
                 <p>$ 120</p>
               </div>
             </div>
@@ -211,7 +177,7 @@
             >
               <i
                 style="font-size: 40px; color: red"
-                class="icon-carts bi-graph-up-arrow"
+                class="icon-carts bi-bar-chart-fill"
               ></i>
 
               <div class="wrapperText" style="font-size: 16px">
@@ -227,11 +193,11 @@
             >
               <i
                 style="font-size: 40px; color: red"
-                class="icon-carts bi-graph-up-arrow"
+                class="icon-carts bi-diagram-3"
               ></i>
 
               <div class="wrapperText" style="font-size: 16px">
-                <p style="color: grey">Total Sale</p>
+                <p style="color: grey">Today Revenue</p>
                 <p>$ 120</p>
               </div>
             </div>
@@ -243,17 +209,310 @@
             >
               <i
                 style="font-size: 40px; color: red"
-                class="icon-carts bi-graph-up-arrow"
+                class="icon-carts bi-pie-chart-fill"
               ></i>
 
               <div class="wrapperText" style="font-size: 16px">
-                <p style="color: grey">Total Sale</p>
+                <p style="color: grey">Total Revenue</p>
                 <p>$ 120</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-main-2" style="margin-left: 50px">
+          <div class="wordwideSales">
+            <div class="itemsMain2">
+              <div class="containerMain2">
+                <div
+                  class="title-wordwide"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <p>WorldWide Sales</p>
+                  <p style="font-size: 13px; color: red">View all</p>
+                </div>
+                <div>
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="itemsMain2">
+              <div class="containerMain2">
+                <div
+                  class="title-salseRevunue"
+                  style="display: flex; justify-content: space-between"
+                >
+                  <p>Salse & Revenue</p>
+                  <p style="font-size: 13px; color: red">View all</p>
+                </div>
+                <div class="canvasLine">
+                  <canvas id="canvasLine"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-items3" style="margin-top: 50px">
+            <div class="container-items3">
+              <div class="mainContent">
+                <div class="itemsContent">
+                  <div class="isiContent">
+                    <h4>Recenct Salse</h4>
+                    <p style="font-size: 14px; color: red">View All</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- aside for list produk -->
+      <aside id="listProduk">
+        <div class="containerCard">
+          <div class="titleList">
+            <h2 style="color: white">List Produk</h2>
+          </div>
+          <div class="wrapper-card">
+            <div class="cardList">
+              <div id="card">
+                <!-- contoh data items -->
+
+                <!-- <div class="produk">
+                  <div class="imageProduk">
+                    <img
+                      src="/image/image-product/gula-aren.webp"
+                      alt="gula aren"
+                    />
+                  </div>
+                  <div class="identityProduk">
+                    <p>Kopi Gula aren</p>
+                  </div>
+                  <div class="decsripsiProduk">
+                    <p>
+                      kopi gula aren adalah kopi enak yang dicampur dengan gula
+                      aren
+                    </p>
+                  </div>
+                  <div class="buttonDelete">
+                    <button>
+                      <i class="delete bi-trash-fill"></i>
+                      <button id="showDataproduk">show</button>
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <aside id="TambahProduk">
+        <!-- content Tambah Produk -->
+        <div class="ContainerTambahProduk">
+          <div class="title">
+            <h2>Tambah Produk</h2>
+          </div>
+          <div class="WrapperProduk" style="margin: 40px 3%">
+            <div
+              class="ContentProdukItems"
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 3rem;
+              "
+            >
+              <!-- image produk -->
+              <div class="uploadImage">
+                <div class="titleUploadImage">
+                  <p>Upload Image Produk</p>
+                </div>
+                <div class="image">
+                  <input type="file" id="image" />
+                </div>
+                <div class="buttonUpload" style="margin-top: 40px">
+                  <button class="btnUpload">Upload Image</button>
+                </div>
+              </div>
+              <!-- identity produk -->
+              <div class="uploadIdentity">
+                <div class="titleIdentity">
+                  <p>Upload Identity</p>
+                </div>
+                <div class="idenityProduk" style="margin-top: 30px">
+                  <form id="nameProduk">
+                    <input type="text" placeholder="Masukan Nama Produk" />
+                  </form>
+                </div>
+              </div>
+              <!-- harga produk -->
+              <div class="uploadHarga">
+                <div class="titlehargaProduk">
+                  <p>Upload Harga</p>
+                </div>
+                <div class="hargaProduk" style="margin-top: 30px">
+                  <form id="hargaProduk">
+                    <input type="text" placeholder="Masukan Harga Produk" />
+                  </form>
+                </div>
+              </div>
+              <!-- descripsi produk -->
+              <div class="uploadDesc">
+                <div class="titleDecs">
+                  <p>Upload Descripsi</p>
+                </div>
+                <div class="DecsProduk" style="margin-top: 30px">
+                  <form id="hargaProduk">
+                    <textarea
+                      name=""
+                      id="decsProduktext"
+                      placeholder="Descripsi Produk"
+                      cols="40px"
+                      rows="10px"
+                    ></textarea>
+                  </form>
+                </div>
+              </div>
+              <div class="buttonSave">
+                <button>Upload Produk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <aside id="listUser" style="margin-bottom: 100px">
+        <div class="containerUser" style="margin: 40px 6%">
+          <div class="wrapperUser">
+            <div class="titleUser">
+              <h3>List User</h3>
+            </div>
+          </div>
+          <div class="ContentListUser" style="margin: 70px 5%">
+            <div class="tableUser">
+              <table id="tableData">
+                <tr>
+                  <th>Username</th>
+                  <th>Password</th>
+                  <th>Last Login</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <aside id="setting" style="margin: 30px 5%">
+        <div class="containerSetting">
+          <div class="wrapperSetting">
+            <div class="titleSetting">
+              <h2>Pengaturan</h2>
+            </div>
+          </div>
+          <div class="contentSetting" style="margin: 50px 8%">
+            <div class="AdminSetting">
+              <div class="tableAdmin">
+                <div class="titleAdmin">
+                  <h3>Table Admin</h3>
+                </div>
+                <div class="AcountAdmin" style="margin-top: 40px">
+                  <table>
+                    <tr>
+                      <th>Username</th>
+                      <th>Role</th>
+                      <th>Last Login</th>
+                      <th>Edit</th>
+                    </tr>
+                    <tr>
+                      <td>Rado Hidayatullo</td>
+                      <td>Pemilik</td>
+                      <td>2025-06-19T16:31:44.873Z</td>
+                      <td style="text-align: center">
+                        <i class="trash bi-pencil-fill"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Rifqi Kurniawan</td>
+                      <td>Admin</td>
+                      <td>2025-06-19T16:31:44.873Z</td>
+                      <td style="text-align: center">
+                        <i class="trash bi-pencil-fill"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Mutiara Wulandari</td>
+                      <td>Management</td>
+                      <td>2025-06-19T16:31:44.873Z</td>
+                      <td style="text-align: center">
+                        <i class="trash bi-pencil-fill"></i>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="logoutBtn">
+                <button class="logout">Log Out</button>
               </div>
             </div>
           </div>
         </div>
       </aside>
     </main>
+
+    <!-- chart js -->
+
+    <script src="/dashboard-admin/ux/HandleAsideNavbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/dashboard-admin/ux/admin.js"></script>
+    <script type="module" src="/dashboard-admin/ux/GetDataUser.js"></script>
+    <script type="module" src="/dashboard-admin/ux/DeleteHandel.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+      const CanvasLine = document.getElementById("canvasLine");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["senin", "selasa", "rabu", "kami", "jum'at", "sabtu"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [102, 19, 40, 50, 22, 31],
+              borderWidth: 2,
+              backgroundColor: "red",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      new Chart(CanvasLine, {
+        type: "line",
+        data: {
+          labels: ["senin", "selasa", "rabu", "kamis", "jum'at", "sabtu"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 2,
+              backgroundColor: "red",
+              borderColor: "red",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
