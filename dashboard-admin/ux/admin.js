@@ -21,7 +21,7 @@ product.forEach((items) => {
                         <p>${items.decs}</p>
                     </div>
                     <div class="buttonDelete">
-                        <button id="handelDeleteProduk">
+                        <button id="handelDeleteProduk" name="${items.id}">
                             <i class="delete bi-trash-fill"></i>
                         </button>
                 </div>

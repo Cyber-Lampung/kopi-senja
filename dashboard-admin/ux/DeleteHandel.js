@@ -4,10 +4,16 @@ import { getDataId } from "../../data-product/items/api-produck/produc.js";
 
 function HandelDeleteDataProduk() {
   const btnHandeDeleteProduk = document.querySelectorAll("#handelDeleteProduk");
+  const btnCloseShow = document.getElementById("DeleteProduk");
+  const closeMenuDelete = document.querySelector(".close");
+
+  closeMenuDelete.addEventListener("click", () => {
+    btnCloseShow.style.display = "none";
+  });
 
   btnHandeDeleteProduk.forEach((btnHandel) => {
     btnHandel.addEventListener("click", () => {
-      alert(1);
+      btnCloseShow.style.display = "block";
     });
   });
 }
