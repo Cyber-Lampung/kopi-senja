@@ -2,17 +2,29 @@ import { product } from "../../data-product/items/api-produck/produc.js";
 
 // function delete produk
 
-function DeleteProduk() {
+export function DeleteProduk() {
   // membuat ketika user mengclick icon delete maka mentriger element button
 
-  const btnHandeDeleteProduk = document.querySelectorAll("#handelDeleteProduk");
-  const mainContentDeleteProduk = document.querySelector(".mainContentDelete");
+  const btnDeleteProduk = document.querySelectorAll("#handelDeleteProduk");
 
-  btnHandeDeleteProduk.forEach((itemDelete) => {
-    // memdapatkan item dari setiap element
+  btnDeleteProduk.forEach((btnDel) => {
+    btnDel.addEventListener("click", () => {
+      const idProduk = btnDel.attributes[1].textContent;
 
-    itemDelete.addEventListener("click", () => {
-      console.log(mainContentDeleteProduk);
+      const hapusProduk = prompt("Apakah kamu yakin ingin menghapus produk ? ");
+
+      if (hapusProduk.toLocaleLowerCase() === "yes") {
+        const CheckData = product.findIndex(
+          (ProdukId) => ProdukId.id === idProduk
+        );
+
+        if (CheckData != -1) {
+          product.slice(CheckData, 1);
+          console.log("data berhasil dihapus");
+        } else {
+          console.log("produk tidak ditemukan");
+        }
+      }
     });
   });
 }

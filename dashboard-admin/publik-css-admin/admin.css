@@ -483,6 +483,30 @@ td {
   border-radius: 20px;
 }
 
+.btnCombi {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonEditProduk {
+  display: flex;
+}
+
+.buttonEditProduk {
+  gap: 1rem;
+}
+
+#HandelEditProduk {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  color: red;
+  background-color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 @keyframes showHidden {
   from {
     opacity: 0.4;

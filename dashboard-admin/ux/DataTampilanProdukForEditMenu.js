@@ -1,7 +1,8 @@
 import { product } from "../../data-product/items/api-produck/produc.js";
+import { DeleteProduk } from "./DeleteProduk.js";
 
 function GetDataClick() {
-  const btnHandeDeleteProduk = document.querySelectorAll("#handelDeleteProduk");
+  const btnHandeDeleteProduk = document.querySelectorAll("#HandelEditProduk");
 
   btnHandeDeleteProduk.forEach((btn) => {
     // jika di click maka akan mentriger element berikut
@@ -15,7 +16,7 @@ function GetDataClick() {
       if (foundProduk) {
         const dataProdukUi = `
         
-        <div class="mainContentDelete" style="margin: 50px 1%">
+        
                         <div class="ContentDelete" style="display: flex">
                             <div class="imageProdukDelete">
                             <img
@@ -78,12 +79,12 @@ function GetDataClick() {
                                 border-radius: 10px;
                                 cursor: pointer;
                                 border: solid 2px black;
-                            " id="btnDelete"
+                            " id="btnDeleteProduk"
                             >
-                            Delete Produk
+                            Save Produk
                             </button>
                         </div>
-                        </div>
+                        
         
         `;
 

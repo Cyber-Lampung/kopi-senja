@@ -20,10 +20,16 @@ product.forEach((items) => {
                     <div class="decsripsiProduk">
                         <p>${items.decs}</p>
                     </div>
+                    <div class="btnCombi">
+                    <div class="buttonEditProduk">
+                        <button id="HandelEditProduk" name="${items.id}">
+                            <i class="delete bi-pencil-fill"></i>
+                        </button>
                     <div class="buttonDelete">
                         <button id="handelDeleteProduk" name="${items.id}">
                             <i class="delete bi-trash-fill"></i>
                         </button>
+                </div>
                 </div>
             </div>
 
