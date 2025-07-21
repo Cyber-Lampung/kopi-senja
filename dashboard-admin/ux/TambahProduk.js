@@ -1,43 +1,42 @@
+import { product } from "../../data-product/items/api-produck/produc.js";
+
+// localstorage data global dan data yang akan dibutuhkan seperti import export file
+const localData = localStorage.getItem("DatabaseSimulasi");
+const number = Math.random();
+
+// localData diubah ke JSON.parse untuk menjadikannya menjadi bentuk Objek bukan JSON.stringify
+
+let dataProduk = JSON.parse(localData);
+
 function TambahProduk() {
-  const objekData = [];
+  // get btn yang akan di event atau di click untuk send data
 
-  // ambil data button
+  const btnSendData = document.getElementById("UploadProduk");
 
-  const btn = document.getElementById("BtnTambahProduk");
+  btnSendData.addEventListener("click", () => {
+    // getElement data di html
 
-  btn.addEventListener("click", () => {
-    // get data produk
+    const image = document.getElementById("image").value;
+    const identity = document.getElementById("identity").value;
+    const hargaProduk = document.getElementById("HargaProduk").value;
+    const decsProduktext = document.getElementById("decsProduktext").value;
 
-    const nameProduk = document.getElementById("nameProduk").value;
-    const decs = document.getElementById("decs").value;
-    const image = document.getElementById("upload").value;
+    // validasi inputan user
 
-    //   check data
-
-    if (!nameProduk || !decs || !image) {
-      console.log("gagal get data empety value");
+    if (!image || !identity || !hargaProduk || !decsProduktext) {
+      alert("data harus diisi semua");
       return;
     }
 
-    try {
-      const ObjekProduk = {
-        NamaBarang: nameProduk,
-        Decs: decs,
-        image: image,
-      };
+    // jika berhasil maka lanjutkan send ke data localStorage
 
-      //   fetch data simulasi
+    dataProduk.id += `data-${number}`;
+    dataProduk.image += image;
+    dataProduk.jenis += identity;
+    dataProduk.harga += hargaProduk;
+    dataProduk.decs += decsProduktext;
 
-      fetch("http://localhost:3000/api", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(ObjekProduk),
-      });
-    } catch {
-      console.log("gagal ambil data");
-    }
+    console.log(dataProduk);
   });
 }
 

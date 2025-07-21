@@ -57,6 +57,8 @@ export const product = [
   },
 ];
 
+localStorage.setItem("SimulasiDatabase", product);
+
 export function getDataId(dataProduck) {
   const id = document.querySelectorAll(".card");
 

@@ -6,6 +6,7 @@
     <title>Dashboard Admin</title>
     <!-- link external css -->
     <link rel="stylesheet" href="/dashboard-admin/publik-css-admin/admin.css" />
+    <link rel="stylesheet" href="/component/input/input.css" />
     <!-- link bostrap icon -->
     <link
       rel="stylesheet"
@@ -367,7 +368,11 @@
                 </div>
                 <div class="idenityProduk" style="margin-top: 30px">
                   <form id="nameProduk">
-                    <input type="text" placeholder="Masukan Nama Produk" />
+                    <input
+                      type="text"
+                      placeholder="Masukan Nama Produk"
+                      id="identity"
+                    />
                   </form>
                 </div>
               </div>
@@ -378,7 +383,11 @@
                 </div>
                 <div class="hargaProduk" style="margin-top: 30px">
                   <form id="hargaProduk">
-                    <input type="text" placeholder="Masukan Harga Produk" />
+                    <input
+                      type="text"
+                      placeholder="Masukan Harga Produk"
+                      id="HargaProduk"
+                    />
                   </form>
                 </div>
               </div>
@@ -400,7 +409,7 @@
                 </div>
               </div>
               <div class="buttonSave">
-                <button>Upload Produk</button>
+                <button id="UploadProduk">Upload Produk</button>
               </div>
             </div>
           </div>
@@ -413,7 +422,12 @@
               <h3>List User</h3>
             </div>
           </div>
-          <div class="ContentListUser" style="margin: 70px 5%">
+          <!-- search feature -->
+          <form id="formSearch">
+            <div id="searchAppend"></div>
+          </form>
+          <!-- search end -->
+          <div class="ContentListUser" style="margin: 90px 5%">
             <div class="tableUser">
               <table id="tableData">
                 <tr>
@@ -490,11 +504,14 @@
     <script type="module" src="/dashboard-admin/ux/admin.js"></script>
     <script type="module" src="/dashboard-admin/ux/GetDataUser.js"></script>
     <script type="module" src="/dashboard-admin/ux/HandelIconPopUp.js"></script>
+    <script type="module" src="/dashboard-admin/ux/appendFile.js"></script>
     <script
       type="module"
       src="/dashboard-admin/ux/DataTampilanProdukForEditMenu.js"
     ></script>
     <script type="module" src="/dashboard-admin/ux/DeleteProduk.js"></script>
+    <script type="module" src="/dashboard-admin/ux/TambahProduk.js"></script>
+    <script type="module" src="/dashboard-admin/ux/SearchFeature.js"></script>
 
     <script>
       const ctx = document.getElementById("myChart");

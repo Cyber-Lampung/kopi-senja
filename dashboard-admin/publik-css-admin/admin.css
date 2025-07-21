@@ -507,6 +507,21 @@ td {
   cursor: pointer;
 }
 
+#input {
+  padding: 10px;
+  border: solid 2px;
+  outline: none;
+  width: 300px;
+  height: 10px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 30px;
+  float: right;
+  height: 30px;
+}
+
 @keyframes showHidden {
   from {
     opacity: 0.4;
