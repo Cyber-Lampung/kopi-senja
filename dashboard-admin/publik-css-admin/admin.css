@@ -416,6 +416,9 @@ body {
 
 table {
   width: 100%;
+  border-bottom: solid 2px white;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table,

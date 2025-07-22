@@ -7,8 +7,8 @@ function ListUser() {
     const ListUser = `
     
     <table>
-        <tr id="datauser">
-            <td id="user">${listUser.username}</td>
+        <tr>
+            <td>${listUser.username}</td>
             <td>${listUser.password}</td>
             <td>${listUser.lastLogin}</td>
         </tr>

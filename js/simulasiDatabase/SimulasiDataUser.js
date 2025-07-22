@@ -9,48 +9,6 @@ const namaOrang = [
   "Farah",
   "Gilang",
   "Hasan",
-  "Intan",
-  "Joko",
-  "Kartika",
-  "Lutfi",
-  "Maria",
-  "Nina",
-  "Oka",
-  "Putri",
-  "Qori",
-  "Rian",
-  "Sinta",
-  "Teguh",
-  "Umi",
-  "Vina",
-  "Wawan",
-  "Xena",
-  "Yusuf",
-  "Zahra",
-  "Adi",
-  "Bella",
-  "Cahyo",
-  "Dina",
-  "Eka",
-  "Fajar",
-  "Galuh",
-  "Hani",
-  "Indra",
-  "Jihan",
-  "Kiki",
-  "Lia",
-  "Miko",
-  "Nanda",
-  "Olga",
-  "Panca",
-  "Qila",
-  "Rafi",
-  "Sari",
-  "Tia",
-  "Ujang",
-  "Via",
-  "Wira",
-  "Yani",
 ]; // 50 nama, akan dipakai ulang untuk 100 data
 
 const generateRandomPassword = () => {
@@ -71,9 +29,9 @@ const generateRandomDate = () => {
   return past.toISOString();
 };
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 50; i++) {
   const randomName =
-    namaOrang[i % namaOrang.length] + Math.floor(Math.random() * 100);
+    namaOrang[i % namaOrang.length] + Math.floor(Math.random() * 50);
   user.push({
     username: randomName,
     password: generateRandomPassword(),

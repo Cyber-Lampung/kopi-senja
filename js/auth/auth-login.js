@@ -15,6 +15,7 @@ function getUser() {
 
     if (!username || !password) {
       console.log("not value invalid");
+      return;
     }
 
     // ambil user dari localStorage
