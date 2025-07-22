@@ -148,3 +148,15 @@ input {
   width: 35px;
   border-radius: 100px;
 }
+
+@media screen and (min-width: 768px) {
+  .container-login .container-box .icon .image-login {
+    position: relative;
+    left: 0px;
+  }
+
+  .icon-login {
+    justify-content: start;
+    font-size: 14px;
+  }
+}

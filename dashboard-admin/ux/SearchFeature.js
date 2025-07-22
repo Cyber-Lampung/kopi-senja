@@ -8,7 +8,7 @@ function searchFeature() {
 
     // ambil search value
 
-    const valueSearch = document.getElementById("input").value.toLowerCase();
+    let valueSearch = document.getElementById("input").value.toLowerCase();
 
     let rows = document.querySelectorAll("table tr");
 
