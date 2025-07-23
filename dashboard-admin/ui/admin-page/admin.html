@@ -48,13 +48,25 @@
         </div>
         <div class="accountUser">
           <div class="imageUser">
-            <img src="/image/auth-image/image-person.png" alt="" />
+            <img class="img" src="/image/auth-image/image-person.png" alt="" />
           </div>
           <div class="usernameAccount" style="font-size: 14px">Jhon Doe</div>
           <div class="iconDown">
             <i class="downIcon bi-chevron-down"></i>
           </div>
         </div>
+        <div class="closeBar">
+          <label for="closemenu">
+            <i class="x bi-x-lg"></i>
+          </label>
+          <!-- <input type="checkbox" id="closemenu" hidden /> -->
+        </div>
+      </div>
+      <div class="menu">
+        <label for="menu">
+          <i class="list bi-list"></i>
+        </label>
+        <input type="checkbox" hidden id="checkbox" />
       </div>
     </header>
 
@@ -79,11 +91,14 @@
               style="margin-left: 40px; margin-top: 40px"
             >
               <div class="wrapper-list">
-                <div
-                  class="mainContentList"
-                  style="display: flex; flex-direction: column; gap: 3rem"
-                >
+                <div class="mainContentList">
                   <div class="dashboard" style="cursor: pointer">
+                    <div class="iconcloseMobile">
+                      <label for="asideNavbarLeft">
+                        <i class="slideLeft bi-chevron-compact-right"></i>
+                      </label>
+                      <input type="checkbox" id="asideNavbarLeft" hidden />
+                    </div>
                     <div
                       class="dashboardicon"
                       style="display: flex; align-items: center; gap: 1rem"
@@ -506,6 +521,7 @@
     <script type="module" src="/dashboard-admin/ux/DeleteProduk.js"></script>
     <script type="module" src="/dashboard-admin/ux/TambahProduk.js"></script>
     <script type="module" src="/dashboard-admin/ux/SearchFeature.js"></script>
+    <script src="/dashboard-admin/ux/handelNavbarMobile.js"></script>
 
     <script>
       const ctx = document.getElementById("myChart");
